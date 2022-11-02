@@ -36,9 +36,9 @@ somni.dotfiles ― Windows programs
 ## Portable(no installer) Programs
 > These programs does not have executable installer, or just personal preference, so should be installed manually by unzipping the program archive somewhere.
 
-| Name                   | Type                                    | Link                                                         | Comments                                                    |
-| ---------------------- | --------------------------------------- | ------------------------------------------------------------ | ----------------------------------------------------------- |
-| madVR                  | Media Player Component (Video Renderer) | http://madvr.com/                                            | Register video renderer using `install.bat`.                |
-| Android Platform Tools | Development & Device Management         | https://developer.android.com/studio/releases/platform-tools | Unzip into somewhere and register directory path in %PATH%. |
-| aria2                  | Utility (Download Helper)               | https://github.com/aria2/aria2                               | Unzip into somewhere and register directory path in %PATH%. |
-| MobaXterm              | Development                             | https://mobaxterm.mobatek.net/                               | Use Home Edition. Use Preview version if available.         |
+| Name                   | Type                                    | Link                                                         | Comments                                                      |
+| ---------------------- | --------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------- |
+| madVR                  | Media Player Component (Video Renderer) | http://madvr.com/                                            | Register video renderer using `install.bat`.                  |
+| Android Platform Tools | Development & Device Management         | https://developer.android.com/studio/releases/platform-tools | Unzip into somewhere and register directory path in `%PATH%`. |
+| aria2                  | Utility (Download Helper)               | https://github.com/aria2/aria2                               | Unzip into somewhere and register directory path in `%PATH%`. |
+| MobaXterm              | Development                             | https://mobaxterm.mobatek.net/                               | Use Home Edition. Use Preview version if available.           |
