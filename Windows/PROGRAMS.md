@@ -2,43 +2,91 @@ somni.dotfiles ― Windows programs
 =================================
 
 ## Standalone Installable Programs
-| Name                        | Type                                   | Link                                                                                  | Comments                                                                                                                                                                                                                     |
-| --------------------------- | -------------------------------------- | ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 7-zip                       | Archiver                               | https://7-zip.org/                                                                    | Use testing version(beta, alpha...) if available.<br/>Change theme with https://github.com/Wilenty/7zTC-7-ZIP-NanaZip-Theme-Changer                                                                                          |
-| Autodesk Fusion 360         | Creativity (3D CAD)                    | https://www.autodesk.co.kr/products/fusion-360/                                       | Personal license (free, https://www.autodesk.com/products/fusion-360/personal).                                                                                                                                              |
-| Bitwarden                   | Password Manager                       | https://bitwarden.com/                                                                | Also install web browser extensions.                                                                                                                                                                                         |
-| Chrome Beta                 | Web Browser                            | https://www.google.com/chrome/beta/?standalone=1                                      | Use Beta version.                                                                                                                                                                                                            |
-| Discord                     | SNS / Messenger                        | https://discord.com/                                                                  |                                                                                                                                                                                                                              |
-| EasyEDA                     | Creativity (Electronic Circuit Design) | https://easyeda.com/                                                                  | Use Standard Edition.                                                                                                                                                                                                        |
-| Git (git-scm)               | Development                            | https://git-scm.com/                                                                  |                                                                                                                                                                                                                              |
-| Google Drive                | File Sync                              | https://www.google.com/drive/download/                                                |                                                                                                                                                                                                                              |
-| IconViewer                  | Shell Extension                        | https://www.botproductions.com/iconview/download.html                                 |                                                                                                                                                                                                                              |
-| *(ImDisk Toolkit)*          | *System*                               | *https://sourceforge.net/projects/imdisk-toolkit/*                                    | *Install only if to use RAM disk for reducing SSD writes*                                                                                                                                                                    |
-| LAV Filters                 | Media Player Component (Codec)         | https://files.1f0.de/lavf/nightly/                                                    | Use latest nightly build. Set hardware decoder to `D3D11` in video decoder settings.                                                                                                                                         |
-| Visual Studio Code          | Development                            | https://code.visualstudio.com/                                                        | Install using System Installer.                                                                                                                                                                                              |
-| Visual Studio               | Development                            | https://visualstudio.microsoft.com/                                                   | Use latest version of Community edition. Select "at least" `.NET Desktop Development`, `Game Development with Unity`(uncheck Unity Hub) workloads.                                                                           |
-| MPC-HC                      | Media Player                           | https://github.com/clsid2/mpc-hc                                                      | Maintained version by [clsid2](https://github.com/clsid2).                                                                                                                                                                   |
-| MusicBee                    | Music Player                           | https://www.getmusicbee.com/                                                          | Can be updated to latest in-development version, the incremental update packages are available at [the forum](https://getmusicbee.com/forum/index.php?board=6.0)                                                             |
-| Node.js (via `nvm-windows`) | Development                            | https://github.com/coreybutler/nvm-windows                                            | Install latest LTS using `> nvm install lts` command after installing `nvm-windows`.<br/>**NOTE**: `nvm-windows` is intended to be replaced by [`Runtime`](https://github.com/coreybutler/nvm-windows/wiki/Runtime) someday. |
-| Notion                      | Documentation / Memo                   | https://www.notion.so/                                                                |                                                                                                                                                                                                                              |
-| PowerToys                   | System                                 | https://github.com/microsoft/PowerToys                                                |                                                                                                                                                                                                                              |
-| Python                      | Development                            | https://www.python.org/downloads/windows/                                             | Install using Windows Installer of latest major version.                                                                                                                                                                     |
-| Spotify                     | Music Player                           | https://www.spotify.com/download/windows/                                             |                                                                                                                                                                                                                              |
-| Unity Hub                   | Development                            | https://unity.com/download                                                            | Install latest LTS editor.                                                                                                                                                                                                   |
-| VeraCrypt                   | System                                 | https://www.veracrypt.fr/en/Downloads.html                                            |                                                                                                                                                                                                                              |
-| VMware Workstation Player   | Virtual Machine                        | https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html |                                                                                                                                                                                                                              |
+### System Utilities
+- **NanaZip**
+  - https://github.com/M2Team/NanaZip
+  - Install MSIX package from GitHub Releases instead of from Microsoft Store.
+- **IconViewer**
+  - https://www.botproductions.com/iconview/download.html
+- **Microsoft PowerToys**
+  - https://github.com/microsoft/PowerToys
+- **VeraCrypt**
+  - https://www.veracrypt.fr/en/Downloads.html
+- **VMware Workstation Player**
+  - https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html
+
+### Development
+- **Git (git-scm)**
+  - https://git-scm.com/
+- **Visual Studio**
+  - https://visualstudio.microsoft.com/
+  - Use latest version of Community edition. Select "at least" `.NET Desktop Development`, `Game Development with Unity`(uncheck Unity Hub) workloads.
+- **Visual Studio Code**
+  - https://code.visualstudio.com/
+  - Install using System Installer.
+- **Unity Hub**
+  - https://unity.com/download
+  - Install latest LTS editor.
+- **Node.js** (via `nvm-windows`)
+  - https://github.com/coreybutler/nvm-windows
+  - Install latest LTS using `> nvm install lts` command after installing `nvm-windows`.<br/>**NOTE**: `nvm-windows` is intended to be replaced by [`Runtime`](https://github.com/coreybutler/nvm-windows/wiki/Runtime) someday.
+- **Python**
+  - https://www.python.org/downloads/windows/
+  - Install using Windows Installer of latest major version.
+
+### SNS / Messenger
+- **Discord**
+  - https://discord.com/
+
+### Sync
+- **Bitwarden**
+  - https://bitwarden.com/
+  - Also install web browser extension.
+- **Google Drive**
+  - https://www.google.com/drive/download/
+- **Notion**
+  - https://www.notion.so/
+
+### Media
+- **LAV Filters**
+  - https://files.1f0.de/lavf/nightly/
+  - Use latest nightly build. Set hardware decoder to `D3D11` in video decoder settings.
+- **MPC-HC**
+  - https://github.com/clsid2/mpc-hc
+  - Use maintained version by [clsid2](https://github.com/clsid2).
+- **MusicBee**
+  - https://www.getmusicbee.com/
+  - Can be updated to latest in-development version, the incremental update packages are available at [the forum](https://getmusicbee.com/forum/index.php?board=6.0)
+- **Spotify**
+  - https://www.spotify.com/download/windows/
+
+---
 
 ## From Microsoft Store
-| Name             | Type   | Link                                                   | Comments                                                                                                    |
-| ---------------- | ------ | ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
-| Windows Terminal | System | https://www.microsoft.com/store/productId/9N0DX20HK701 | Windows Terminal might have preinstalled on Windows installation. Ensure the version is at least **v1.13**. |
+### System Utilities
+- **Windows Terminal**
+  - https://www.microsoft.com/store/productId/9N0DX20HK701
+  - Ensure the version is at least **v1.13**.
 
 ## Portable(no installer) Programs
 > These programs does not have executable installer, or just personal preference, so should be installed manually by unzipping the program archive somewhere.
 
-| Name                   | Type                                    | Link                                                         | Comments                                                      |
-| ---------------------- | --------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------- |
-| madVR                  | Media Player Component (Video Renderer) | http://madvr.com/                                            | Register video renderer using `install.bat`.                  |
-| Android Platform Tools | Development & Device Management         | https://developer.android.com/studio/releases/platform-tools | Unzip into somewhere and register directory path in `%PATH%`. |
-| aria2                  | Utility (Download Helper)               | https://github.com/aria2/aria2                               | Unzip into somewhere and register directory path in `%PATH%`. |
-| MobaXterm              | Development                             | https://mobaxterm.mobatek.net/                               | Use Home Edition. Use Preview version if available.           |
+---
+
+### System Utilities
+- **aria2**
+  - https://github.com/aria2/aria2
+  - Unzip into somewhere and register directory path in `%PATH%`.
+
+### Development
+- **Android Platform Tools**
+  - https://developer.android.com/studio/releases/platform-tools
+  - Unzip into somewhere and register directory path in `%PATH%`.
+- **MobaXterm**
+  - https://mobaxterm.mobatek.net/
+  - Use Home Edition. Use Preview version if available.
+
+### Media
+- **madVR**
+  - http://madvr.com/
+  - Register video renderer using `install.bat`.
