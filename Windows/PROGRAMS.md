@@ -1,7 +1,7 @@
 somni.dotfiles ― Windows programs
 =================================
 
-## DO NOT INSTALL
+## ❌ DO NOT INSTALL
 - **NVIDIA GeForce Experience**
   - Kind of shit for a long time
 
@@ -72,6 +72,10 @@ somni.dotfiles ― Windows programs
   - Can be updated to latest in-development version, the incremental update packages are available at [the forum](https://getmusicbee.com/forum/index.php?board=6.0)
 - **Spotify**
   - https://www.spotify.com/download/windows/
+
+### Gaming
+- **Steam**
+  - https://store.steampowered.com/about/
 
 ---
 
