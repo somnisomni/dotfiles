@@ -1,6 +1,10 @@
 somni.dotfiles ― Windows programs
 =================================
 
+## DO NOT INSTALL
+- **NVIDIA GeForce Experience**
+  - Kind of shit for a long time
+
 ## Standalone Installable Programs
 ### System Utilities
 - **NanaZip**
@@ -14,10 +18,17 @@ somni.dotfiles ― Windows programs
   - https://www.veracrypt.fr/en/Downloads.html
 - **VMware Workstation Player**
   - https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html
+- **AnyDesk**
+
+  - https://anydesk.com/
 
 ### Development
 - **Git (git-scm)**
   - https://git-scm.com/
+- **Gpg4win**
+  - https://gpg4win.org/download.html
+- **Keybase**
+  - https://keybase.io/download
 - **Visual Studio**
   - https://visualstudio.microsoft.com/
   - Use latest version of Community edition. Select "at least" `.NET Desktop Development`, `Game Development with Unity`(uncheck Unity Hub) workloads.
@@ -38,7 +49,7 @@ somni.dotfiles ― Windows programs
 - **Discord**
   - https://discord.com/
 
-### Sync
+### File Transfer & Sync
 - **Bitwarden**
   - https://bitwarden.com/
   - Also install web browser extension.
@@ -46,6 +57,8 @@ somni.dotfiles ― Windows programs
   - https://www.google.com/drive/download/
 - **Notion**
   - https://www.notion.so/
+- **qBittorrent**
+  - https://www.qbittorrent.org/download
 
 ### Media
 - **LAV Filters**
@@ -68,15 +81,18 @@ somni.dotfiles ― Windows programs
   - https://www.microsoft.com/store/productId/9N0DX20HK701
   - Ensure the version is at least **v1.13**.
 
+---
+
 ## Portable(no installer) Programs
 > These programs does not have executable installer, or just personal preference, so should be installed manually by unzipping the program archive somewhere.
-
----
 
 ### System Utilities
 - **aria2**
   - https://github.com/aria2/aria2
   - Unzip into somewhere and register directory path in `%PATH%`.
+- **OpenRGB**
+  - https://openrgb.org/
+  - Use this for ARGB sync instead of vendor specific programs (a.k.a. "shit").
 
 ### Development
 - **Android Platform Tools**
