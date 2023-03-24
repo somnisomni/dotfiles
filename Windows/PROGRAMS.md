@@ -93,6 +93,8 @@ somni.dotfiles ― Windows programs
 - **OpenRGB**
   - https://openrgb.org/
   - Use this for ARGB sync instead of vendor specific programs (a.k.a. "shit").
+- **RunCat**
+  - https://github.com/Kyome22/RunCat_for_windows
 
 ### Development
 - **Android Platform Tools**
