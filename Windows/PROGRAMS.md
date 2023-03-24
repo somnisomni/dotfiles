@@ -19,7 +19,6 @@ somni.dotfiles ― Windows programs
 - **VMware Workstation Player**
   - https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html
 - **AnyDesk**
-
   - https://anydesk.com/
 
 ### Development
