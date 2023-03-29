@@ -21,22 +21,26 @@ somni.dotfiles ― Windows programs
 - **AnyDesk**
   - https://anydesk.com/
 
+### Web
+- **Microsoft Edge Beta**
+  - https://www.microsoftedgeinsider.com/ko-kr/download/beta
+
 ### Development
 - **Git (git-scm)**
-  - https://git-scm.com/
+  - https://git-scm.com/download/win
 - **Gpg4win**
   - https://gpg4win.org/download.html
 - **Keybase**
   - https://keybase.io/download
 - **Visual Studio**
-  - https://visualstudio.microsoft.com/
+  - https://visualstudio.microsoft.com/downloads/
   - Use latest version of Community edition. Select "at least" `.NET Desktop Development`, `Game Development with Unity`(uncheck Unity Hub) workloads.
 - **Visual Studio Code**
-  - https://code.visualstudio.com/
+  - https://code.visualstudio.com/Download
   - Install using System Installer.
 - **Unity Hub**
   - https://unity.com/download
-  - Install latest LTS editor.
+  - Install latest LTS editor after installing the Hub.
 - **Node.js** (via `nvm-windows`)
   - https://github.com/coreybutler/nvm-windows
   - Install latest LTS using `> nvm install lts` command after installing `nvm-windows`.<br/>**NOTE**: `nvm-windows` is intended to be replaced by [`Runtime`](https://github.com/coreybutler/nvm-windows/wiki/Runtime) someday.
@@ -46,7 +50,7 @@ somni.dotfiles ― Windows programs
 
 ### SNS / Messenger
 - **Discord**
-  - https://discord.com/
+  - https://discord.com/download
 
 ### File Transfer & Sync
 - **Bitwarden**
