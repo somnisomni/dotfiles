@@ -87,6 +87,9 @@ somni.dotfiles ― Windows programs
 ### Gaming
 - **Steam**
   - https://store.steampowered.com/about/
+- **MSI Afterburner**
+  - https://www.msi.com/Landing/afterburner/graphics-cards
+  - Install only when need to adjust GPU voltage/clock curve.
 
 ---
 
@@ -126,3 +129,11 @@ somni.dotfiles ― Windows programs
 - **madVR**
   - http://madvr.com/
   - Register video renderer using `install.bat`.
+
+---
+
+## Progressive Web Applications
+
+### File Transfer & Sync
+- **Google Keep**
+  - https://keep.google.com/
