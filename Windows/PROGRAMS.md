@@ -75,6 +75,10 @@ somni.dotfiles ― Windows programs
   - Can be updated to latest in-development version, the incremental update packages are available at [the forum](https://getmusicbee.com/forum/index.php?board=6.0)
 - **Spotify**
   - https://www.spotify.com/download/windows/
+- **ImageGlass**
+  - https://imageglass.org/
+  - **Use the version at least v9.0.** v8.x has laggy UI.
+  - Use this as the default image viewer.
 
 ### Gaming
 - **Steam**
