@@ -6,6 +6,13 @@ somni.dotfiles ― Windows programs
   - Kind of shit for a long time
 
 ## Standalone Installable Programs
+### Runtime
+- **DirectX end-user runtime**
+  - https://www.microsoft.com/ko-kr/download/details.aspx?id=35
+- **.NET Desktop Runtime**
+  - https://dotnet.microsoft.com/ko-kr/download/dotnet
+  - Install latest stable, supported build. **No need to install this if planning to install .NET SDK.**
+
 ### System Utilities
 - **NanaZip**
   - https://github.com/M2Team/NanaZip
@@ -26,27 +33,30 @@ somni.dotfiles ― Windows programs
   - https://www.microsoftedgeinsider.com/ko-kr/download/beta
 
 ### Development
+- **Visual Studio Code**
+  - https://code.visualstudio.com/Download
+  - Install using System Installer.
 - **Git (git-scm)**
   - https://git-scm.com/download/win
 - **Gpg4win**
   - https://gpg4win.org/download.html
 - **Keybase**
   - https://keybase.io/download
-- **Visual Studio**
-  - https://visualstudio.microsoft.com/downloads/
-  - Use latest version of Community edition. Select "at least" `.NET Desktop Development`, `Game Development with Unity`(uncheck Unity Hub) workloads.
-- **Visual Studio Code**
-  - https://code.visualstudio.com/Download
-  - Install using System Installer.
-- **Unity Hub**
-  - https://unity.com/download
-  - Install latest LTS editor after installing the Hub.
 - **Node.js** (via `nvm-windows`)
   - https://github.com/coreybutler/nvm-windows
   - Install latest LTS using `> nvm install lts` command after installing `nvm-windows`.<br/>**NOTE**: `nvm-windows` is intended to be replaced by [`Runtime`](https://github.com/coreybutler/nvm-windows/wiki/Runtime) someday.
 - **Python**
   - https://www.python.org/downloads/windows/
   - Install using Windows Installer of latest major version.
+- **.NET SDK**
+  - https://dotnet.microsoft.com/ko-kr/download/dotnet
+  - Install latest stable, supported build.
+- **Unity Hub**
+  - https://unity.com/download
+  - Install latest LTS editor after installing the Hub.
+- **Visual Studio**
+  - https://visualstudio.microsoft.com/downloads/
+  - Use latest version of Community edition. Select "at least" `.NET Desktop Development`, `Game Development with Unity`(uncheck Unity Hub) workloads.
 
 ### SNS / Messenger
 - **Discord**
