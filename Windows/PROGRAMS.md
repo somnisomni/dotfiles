@@ -79,6 +79,10 @@ somni.dotfiles ― Windows programs
   - https://imageglass.org/
   - **Use the version at least v9.0.** v8.x has laggy UI.
   - Use this as the default image viewer.
+  - Add-ons
+    - **ExifGlass**
+      - https://github.com/d2phap/ExifGlass
+      - Install onto ImageGlass installation.
 
 ### Gaming
 - **Steam**
@@ -100,6 +104,9 @@ somni.dotfiles ― Windows programs
 ### System Utilities
 - **aria2**
   - https://github.com/aria2/aria2
+  - Unzip into somewhere and register directory path in `%PATH%`.
+- **ExifTool**
+  - https://exiftool.org/
   - Unzip into somewhere and register directory path in `%PATH%`.
 - **OpenRGB**
   - https://openrgb.org/
