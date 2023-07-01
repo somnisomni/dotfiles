@@ -14,23 +14,30 @@ somni.dotfiles ― Windows programs
   - Install latest stable, supported build. **No need to install this if planning to install .NET SDK.**
 
 ### System Utilities
-- **NanaZip**
-  - https://github.com/M2Team/NanaZip
-  - Install MSIX package from GitHub Releases instead of from Microsoft Store.
-- **IconViewer**
-  - https://www.botproductions.com/iconview/download.html
+- **Windows Terminal**
+  - https://github.com/microsoft/terminal
+  - Install latest stable release.
+  - Use this as default console host.
+  - **DON'T INSTALL THIS FROM MICROSOFT STORE.** Outdated version published on there.
+  - Ensure the version is at least **v1.13**.
 - **Microsoft PowerToys**
   - https://github.com/microsoft/PowerToys
+- **NanaZip**
+  - https://github.com/M2Team/NanaZip
+  - Install MSIX package of latest preview(if available) version from GitHub Releases instead of from Microsoft Store.
+- **IconViewer**
+  - https://www.botproductions.com/iconview/download.html
 - **VeraCrypt**
   - https://www.veracrypt.fr/en/Downloads.html
 - **VMware Workstation Player**
   - https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html
-- **AnyDesk**
-  - https://anydesk.com/
+- **Parsec**
+  - https://parsec.app/
 
 ### Web
 - **Microsoft Edge Beta**
   - https://www.microsoftedgeinsider.com/ko-kr/download/beta
+  - Disable/Remove all of bloatwa
 
 ### Development
 - **Visual Studio Code**
@@ -68,6 +75,8 @@ somni.dotfiles ― Windows programs
   - Also install web browser extension.
 - **Google Drive**
   - https://www.google.com/drive/download/
+- **OneDrive** *(if needed)*
+  - Use Windows 10/11 built-in software.
 - **Notion**
   - https://www.notion.so/
 - **qBittorrent**
@@ -76,19 +85,20 @@ somni.dotfiles ― Windows programs
 ### Media
 - **LAV Filters**
   - https://files.1f0.de/lavf/nightly/
-  - Use latest nightly build. Set hardware decoder to `D3D11` in video decoder settings.
+  - Use latest nightly build.
+  - Set hardware decoder to `D3D11` in video decoder settings.
 - **MPC-HC**
   - https://github.com/clsid2/mpc-hc
   - Use maintained version by [clsid2](https://github.com/clsid2).
 - **MusicBee**
   - https://www.getmusicbee.com/
-  - Can be updated to latest in-development version, the incremental update packages are available at [the forum](https://getmusicbee.com/forum/index.php?board=6.0)
+  - Can be updated to latest in-development version. Incremental update packages are available at [the forum](https://getmusicbee.com/forum/index.php?board=6.0)
 - **Spotify**
   - https://www.spotify.com/download/windows/
 - **ImageGlass**
   - https://imageglass.org/
   - **Use the version at least v9.0.** v8.x has laggy UI.
-  - Use this as the default image viewer.
+  - Use this as default image viewer.
   - Add-ons
     - **ExifGlass**
       - https://github.com/d2phap/ExifGlass
@@ -104,10 +114,6 @@ somni.dotfiles ― Windows programs
 ---
 
 ## From Microsoft Store
-### System Utilities
-- **Windows Terminal**
-  - https://www.microsoft.com/store/productId/9N0DX20HK701
-  - Ensure the version is at least **v1.13**.
 
 ---
 
@@ -121,6 +127,7 @@ somni.dotfiles ― Windows programs
 - **ExifTool**
   - https://exiftool.org/
   - Unzip into somewhere and register directory path in `%PATH%`.
+  - This is a dependency of **ExifGlass**.
 - **OpenRGB**
   - https://openrgb.org/
   - Use this for ARGB sync instead of vendor specific programs (a.k.a. "shit").
@@ -138,12 +145,11 @@ somni.dotfiles ― Windows programs
 ### Media
 - **madVR**
   - http://madvr.com/
-  - Register video renderer using `install.bat`.
+  - Unzip into somewhere and egister video renderer using `install.bat`.
 
 ---
 
 ## Progressive Web Applications
-
 ### File Transfer & Sync
 - **Google Keep**
   - https://keep.google.com/
