@@ -30,7 +30,7 @@ somni.dotfiles ― Windows programs
 - **VeraCrypt**
   - https://www.veracrypt.fr/en/Downloads.html
 - **VMware Workstation Player**
-  - https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html
+  - https://www.vmware.com/products/workstation-player.html
 - **Parsec**
   - https://parsec.app/
 
