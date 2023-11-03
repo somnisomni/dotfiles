@@ -57,6 +57,7 @@ Microsoft.HEIFImageExtension_8wekyb3d8bbwe
 Microsoft.HEVCVideoExtension_8wekyb3d8bbwe
 Microsoft.VP9VideoExtensions_8wekyb3d8bbwe
 Microsoft.WebpImageExtension_8wekyb3d8bbwe
+Microsoft.DolbyAudioExtensions_8wekyb3d8bbwe
 
 ### Surface Hub Apps / Team edition
 # Microsoft.Whiteboard_8wekyb3d8bbwe
