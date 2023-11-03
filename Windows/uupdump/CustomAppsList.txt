@@ -36,6 +36,9 @@ Microsoft.XboxIdentityProvider_8wekyb3d8bbwe
 # Microsoft.549981C3F5F10_8wekyb3d8bbwe
 # MicrosoftCorporationII.QuickAssist_8wekyb3d8bbwe
 # MicrosoftCorporationII.MicrosoftFamily_8wekyb3d8bbwe
+# Microsoft.OutlookForWindows_8wekyb3d8bbwe
+# MicrosoftTeams_8wekyb3d8bbwe
+Microsoft.Windows.DevHome_8wekyb3d8bbwe
 
 ### Media Apps / Client non-N editions
 # Microsoft.ZuneMusic_8wekyb3d8bbwe
