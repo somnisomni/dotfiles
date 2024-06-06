@@ -13,4 +13,5 @@ REG ADD "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsAI" /v "DisableAIDataAn
 
 ECHO.
 ECHO Done!
-EXIT
+ECHO.
+PAUSE
