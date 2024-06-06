@@ -9,4 +9,5 @@ REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" 
 
 ECHO.
 ECHO Done!
-EXIT
+ECHO.
+PAUSE
