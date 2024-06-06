@@ -10,5 +10,5 @@ SC CONFIG WSearch start=disabled
 
 ECHO.
 ECHO Done!
-PING 127.0.0.1 -n 10 >NUL 2>&1
-EXIT
+ECHO.
+PAUSE
