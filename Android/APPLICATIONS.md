@@ -5,7 +5,7 @@ Applications to be installed
 - **Niagara Launcher** [bitpit.launcher](https://play.google.com/store/apps/details?id=bitpit.launcher)
 
 ## Internet
-- **Microsoft Edge Beta** [com.microsoft.emmx.beta](https://play.google.com/store/apps/details?id=com.microsoft.emmx.beta)
+- **Google Chrome Dev** [com.chrome.dev](https://play.google.com/store/apps/details?id=com.chrome.dev)
 - **1.1.1.1** [com.cloudflare.onedotonedotonedotone](https://play.google.com/store/apps/details?id=com.cloudflare.onedotonedotonedotone)
 - **Speedtest.net** [org.zwanoo.android.speedtest](https://play.google.com/store/apps/details?id=org.zwanoo.android.speedtest)
 - **OpenVPN Connect** [net.openvpn.openvpn](https://play.google.com/store/apps/details?id=net.openvpn.openvpn)
@@ -43,8 +43,6 @@ Applications to be installed
 - **MIDI Keyboard** [com.dreamhoundstudios.midikeyboard](https://play.google.com/store/apps/details?id=com.dreamhoundstudios.midikeyboard)
 - **Spotify** [com.spotify.music](https://play.google.com/store/apps/details?id=com.spotify.music)
   - Install only when there's a subscription in use
-- **Netflix** [com.netflix.mediaclient](https://play.google.com/store/apps/details?id=com.netflix.mediaclient)
-  - Install only when there's a subscription in use
 
 ## Language & Dictionary
 - **Google Translate** [com.google.android.apps.translate](https://play.google.com/store/apps/details?id=com.google.android.apps.translate)
@@ -58,7 +56,6 @@ Applications to be installed
 - **NAVER Pay** [com.naverfin.payapp](https://play.google.com/store/apps/details?id=com.naverfin.payapp)
 - **Toss** [viva.republica.toss](https://play.google.com/store/apps/details?id=viva.republica.toss)
 - **PAYCO** [com.nhnent.payapp](https://play.google.com/store/apps/details?id=com.nhnent.payapp)
-  - Install only when enrolled in the university
 - Shinhan Bank/Card/Investment
   - **Shinhan SOL** [com.shinhan.sbanking](https://play.google.com/store/apps/details?id=com.shinhan.sbanking)
   - **Shinhan Play** [com.shcard.smartpay](https://play.google.com/store/apps/details?id=com.shcard.smartpay)
@@ -111,8 +108,6 @@ Applications to be installed
 - **Google Play Games** [com.google.android.play.games](https://play.google.com/store/apps/details?id=com.google.android.play.games)
 
 # Education
-- **Google Classroom** [com.google.android.apps.classroom](https://play.google.com/store/apps/details?id=com.google.android.apps.classroom)
-  - Install only when enrolled in the university, and the lecture uses this
 - **Coursemos** [kr.coursemos.android2](https://play.google.com/store/apps/details?id=kr.coursemos.android2)
   - Install only when enrolled in the university
 
@@ -121,5 +116,5 @@ Applications to be installed
 - **Google Maps** [com.google.android.apps.maps](https://play.google.com/store/apps/details?id=com.google.android.apps.maps)
 - **NAVER Map** [com.nhn.android.nmap](https://play.google.com/store/apps/details?id=com.nhn.android.nmap)
 - **Tmoney GO** [kr.co.tmoney.tia](https://play.google.com/store/apps/details?id=kr.co.tmoney.tia)
-- **알뜰교통카드** [kr.or.kotsa.watc](https://play.google.com/store/apps/details?id=kr.or.kotsa.watc)
-  - Install only when using ALCard
+- **K-Pass** [kr.or.kotsa.watc](https://play.google.com/store/apps/details?id=kr.or.kotsa.watc)
+  - Install only when using a K-Pass card
