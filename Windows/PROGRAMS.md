@@ -29,15 +29,15 @@ somni.dotfiles ― Windows programs
   - https://www.botproductions.com/iconview/download.html
 - **VeraCrypt**
   - https://www.veracrypt.fr/en/Downloads.html
-- **VMware Workstation Player**
-  - https://www.vmware.com/products/workstation-player.html
+- **VMware Workstation Pro**
+  - https://www.techspot.com/downloads/189-vmware-workstation-for-windows.html
+  - If need virtual machiens. From version 17 the Pro edition is free for personal use. Downloading from official website requires account registration, so use TechSpot link instead.
 - **Parsec**
   - https://parsec.app/
 
 ### Web
-- **Microsoft Edge Beta**
-  - https://www.microsoftedgeinsider.com/ko-kr/download/beta
-  - Disable/Remove all of bloatwa
+- **Google Chrome Dev**
+  - https://www.google.com/chrome/dev/?extra=devchannel&platform=win64
 
 ### Development
 - **Visual Studio Code**
@@ -78,7 +78,9 @@ somni.dotfiles ― Windows programs
 - **OneDrive** *(if needed)*
   - Use Windows 10/11 built-in software.
 - **Notion**
-  - https://www.notion.so/
+  - https://www.notion.so/download
+- **Obsidian**
+  - https://obsidian.md/download
 - **qBittorrent**
   - https://www.qbittorrent.org/download
 
@@ -90,6 +92,9 @@ somni.dotfiles ― Windows programs
 - **MPC-HC**
   - https://github.com/clsid2/mpc-hc
   - Use maintained version by [clsid2](https://github.com/clsid2).
+- **ImageMagick**
+  - https://imagemagick.com/script/download.php
+  - Win64 / Dynamic / Q16 / HDRI
 - **MusicBee**
   - https://www.getmusicbee.com/
   - Can be updated to latest in-development version. Incremental update packages are available at [the forum](https://getmusicbee.com/forum/index.php?board=6.0)
