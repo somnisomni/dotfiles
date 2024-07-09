@@ -149,7 +149,7 @@ somni.dotfiles ― Windows programs
 
 ### Media
 - **madVR**
-  - http://madvr.com/
+  - https://www.videohelp.com/software/madVR
   - Unzip into somewhere and egister video renderer using `install.bat`.
 
 ---
