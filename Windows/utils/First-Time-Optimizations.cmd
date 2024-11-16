@@ -16,6 +16,7 @@ ECHO   - Show extensions for known file types
 ECHO   - Show hidden files and folders
 ECHO   - Disable telemetries
 ECHO   - Disable suggestions
+ECHO   - Disable f**cking filter keys and all other key assistant features
 ECHO.
 ECHO If you want to continue, press any key.
 PAUSE >NUL
@@ -99,6 +100,10 @@ REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "S
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ShowSyncProviderNotifications" /t REG_DWORD /d 0 /f
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\UserProfileEngagement" /v "ScoobeSystemSettingEnabled" /t REG_DWORD /d 0 /f
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.Suggested" /v "Enabled" /t REG_DWORD /d 0 /f
+ECHO.
+
+ECHO === Disable filter keys and key assistant features ===
+REG ADD "HKCU\Control Panel\Accessibility\Keyboard Response" /v "Flags" /t REG_SZ /d 0 /f
 ECHO.
 
 ECHO.
