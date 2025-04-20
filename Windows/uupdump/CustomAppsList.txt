@@ -3,7 +3,7 @@
 ###
 ### For changes done to this file to be applied, the CustomList option in the
 ### ConvertConfig.ini file needs to be set to 1.
-### 
+###
 ### This customization is supported only in builds 22563 and later.
 
 ### Choose the wanted apps from below by removing # prefix
@@ -17,7 +17,7 @@ Microsoft.Windows.Photos_8wekyb3d8bbwe
 # Microsoft.WindowsCamera_8wekyb3d8bbwe
 Microsoft.WindowsNotepad_8wekyb3d8bbwe
 Microsoft.Paint_8wekyb3d8bbwe
-# Microsoft.WindowsTerminal_8wekyb3d8bbwe
+Microsoft.WindowsTerminal_8wekyb3d8bbwe
 # MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy
 # Microsoft.WindowsAlarms_8wekyb3d8bbwe
 Microsoft.WindowsCalculator_8wekyb3d8bbwe
@@ -44,7 +44,7 @@ Microsoft.XboxIdentityProvider_8wekyb3d8bbwe
 # Clipchamp.Clipchamp_yxz26nhyzhsrt
 # Microsoft.OutlookForWindows_8wekyb3d8bbwe
 # MicrosoftTeams_8wekyb3d8bbwe
-Microsoft.Windows.DevHome_8wekyb3d8bbwe
+# Microsoft.Windows.DevHome_8wekyb3d8bbwe
 # Microsoft.BingSearch_8wekyb3d8bbwe
 Microsoft.ApplicationCompatibilityEnhancements_8wekyb3d8bbwe
 MicrosoftWindows.CrossDevice_cw5n1h2txyewy
