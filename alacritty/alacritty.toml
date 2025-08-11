@@ -1,0 +1,18 @@
+[window]
+padding.x = 5
+padding.y = 5
+decorations = "Full"
+opacity = 0.66
+blur = true
+
+[font]
+normal = { family = "D2Coding" }
+size = 14
+offset = { y = 2 }
+
+[bell]
+animation = "Linear"
+duration = 500
+
+[cursor]
+style = { shape = "Block", blinking = "On" }
