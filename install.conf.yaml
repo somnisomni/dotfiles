@@ -22,6 +22,9 @@
     # Aria2
     ~/.config/aria2/aria2.conf: aria2/aria2.conf
 
+    # Alacritty
+    ~/.config/alacritty/alacritty.toml: alacritty/alacritty.toml
+
 - shell:
     - description: "Install yay before installing other packages   "
       command: "yes | sudo pacman -S --noconfirm yay"
