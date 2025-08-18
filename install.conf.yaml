@@ -27,12 +27,12 @@
 
 - shell:
     - description: "Install yay before installing other packages   "
-      command: "yes | sudo pacman -S --noconfirm yay"
+      command: "yes | sudo pacman -Syu --noconfirm yay"
       stderr: true
     - description: "Setting up yay   "
       command: "yay -S --save --removemake --devel --editmenu --editor 'nano'"
     - description: "Install core packages   "
-      command: "yes | yay -S --answerdiff None --noconfirm --sudoloop --removemake
+      command: "yes | yay -Syu --needed --answerdiff None --noconfirm --sudoloop --removemake
                 git gnupg
                 nano
                 wget curl aria2
@@ -43,7 +43,7 @@
                 openssh"
       stderr: true
     - description: "Install fonts   "
-      command: "yes | yay -S --answerdiff None --noconfirm --sudoloop --removemake
+      command: "yes | yay -Syu --needed --answerdiff None --noconfirm --sudoloop --removemake
                 otf-ibm-plex
                 noto-fonts-cjk otf-noto-sans-cjk-vf otf-noto-sans-mono-cjk-vf noto-fonts-emoji
                 otf-pretendard otf-pretendard-jp otf-pretendard-std
