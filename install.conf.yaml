@@ -9,6 +9,7 @@
     ~/:
     ~/.config:
       recursive: true
+    # /etc/systemd/zram-generator.conf:
 
 - link:
     # Git
@@ -25,12 +26,23 @@
     # Alacritty
     ~/.config/alacritty/alacritty.toml: alacritty/alacritty.toml
 
+    # # ZRAM
+    # /etc/systemd/zram-generator.conf: zram/zram-generator.conf
+
 - shell:
+    # ZRAM
+    - description: "Enable ZRAM   "
+      command: "sudo systemctl daemon-reload && sudo systemctl start systemd-zram-setup@zram0"
+      stderr: true
+
+    # Yay
     - description: "Install yay before installing other packages   "
       command: "yes | sudo pacman -Syu --noconfirm yay"
       stderr: true
     - description: "Setting up yay   "
       command: "yay -S --save --removemake --devel --editmenu --editor 'nano'"
+
+    # Core packages
     - description: "Install core packages   "
       command: "yes | yay -Syu --needed --answerdiff None --noconfirm --sudoloop --removemake
                 git git-lfs gnupg
@@ -41,8 +53,11 @@
                 sbctl
                 gzip zstd unzip xz tar
                 neofetch
-                openssh"
+                openssh
+                zram-generator"
       stderr: true
+
+    # Fonts
     - description: "Install fonts   "
       command: "yes | yay -Syu --needed --answerdiff None --noconfirm --sudoloop --removemake
                 otf-ibm-plex
@@ -52,6 +67,8 @@
                 otf-kopub
                 ttf-koruri ttf-mplus-git"
       stderr: true
+
+    # Development packages
     - description: "Install development packages   "
       command: "yes | yay -Syu --needed --answerdiff None --noconfirm --sudoloop --removemake
                 github-cli
