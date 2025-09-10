@@ -33,7 +33,7 @@
       command: "yay -S --save --removemake --devel --editmenu --editor 'nano'"
     - description: "Install core packages   "
       command: "yes | yay -Syu --needed --answerdiff None --noconfirm --sudoloop --removemake
-                git gnupg
+                git git-lfs gnupg
                 nano
                 wget curl aria2
                 zsh oh-my-zsh-git
@@ -53,7 +53,7 @@
                 ttf-koruri ttf-mplus-git"
       stderr: true
     - description: "Install development packages   "
-      command: "yes | yay -S --answerdiff None --noconfirm --sudoloop --removemake
+      command: "yes | yay -Syu --needed --answerdiff None --noconfirm --sudoloop --removemake
                 github-cli
                 dotnet-sdk
                 nvm
