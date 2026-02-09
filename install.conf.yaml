@@ -9,7 +9,6 @@
     ~/:
     ~/.config:
       recursive: true
-    # /etc/systemd/zram-generator.conf:
 
 - link:
     # Git
@@ -23,17 +22,14 @@
     # Aria2
     ~/.config/aria2/aria2.conf: aria2/aria2.conf
 
-    # Alacritty
-    ~/.config/alacritty/alacritty.toml: alacritty/alacritty.toml
-
-    # # ZRAM
-    # /etc/systemd/zram-generator.conf: zram/zram-generator.conf
+    # Kitty
+    ~/.config/kitty/kitty.conf: kitty/kitty.conf
+    ~/.config/kitty/themes/Pnevma.conf: kitty/themes/Pnevma.conf
 
 - shell:
-    # ZRAM
-    - description: "Enable ZRAM   "
-      command: "sudo systemctl daemon-reload && sudo systemctl start systemd-zram-setup@zram0"
-      stderr: true
+    # Wait for the input to continue
+    - description: "Press [Ctrl+C] now to skip the package installation..."
+      command: "sleep 5"
 
     # Yay
     - description: "Install yay before installing other packages   "
@@ -41,6 +37,7 @@
       stderr: true
     - description: "Setting up yay   "
       command: "yay -S --save --removemake --devel --editmenu --editor 'nano'"
+      stderr: true
 
     # Core packages
     - description: "Install core packages   "
@@ -63,7 +60,7 @@
                 otf-ibm-plex
                 noto-fonts-cjk otf-noto-sans-cjk-vf otf-noto-sans-mono-cjk-vf noto-fonts-emoji
                 otf-pretendard otf-pretendard-jp otf-pretendard-std
-                ttf-nanum ttf-d2coding
+                ttf-nanum ttf-d2coding ttf-nerd-fonts-symbols
                 otf-kopub
                 ttf-koruri ttf-mplus-git"
       stderr: true
@@ -75,4 +72,12 @@
                 dotnet-sdk
                 nvm
                 python python-pip python-numpy python-yaml"
+      stderr: true
+
+    # ZRAM
+    - description: "Copy zram-generator config  "
+      command: "sudo cp ./zram/zram-generator.conf /etc/systemd/zram-generator.conf"
+      stderr: true
+    - description: "Enable ZRAM   "
+      command: "sudo systemctl daemon-reload && sudo systemctl start systemd-zram-setup@zram0"
       stderr: true
