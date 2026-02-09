@@ -27,83 +27,9 @@
     ~/.config/kitty/themes/Pnevma.conf: kitty/themes/Pnevma.conf
 
 - shell:
-    # Wait for the input to continue
-    - description: "Press [Ctrl+C] now to skip the package installation..."
-      command: "sleep 5"
-
-    # Yay
-    - description: "Install yay before installing other packages   "
-      command: "yes | sudo pacman -Syu --noconfirm yay"
-      stderr: true
-    - description: "Setting up yay   "
-      command: "yay -S --save --removemake --devel --editmenu --editor 'nano' && yay -Syyu --noconfirm"
-      stderr: true
-
-    # Core packages
-    - description: "Install core packages   "
-      command: "yes | yay -Syu --needed --answerdiff None --noconfirm --sudoloop --removemake
-                git git-lfs gnupg
-                nano
-                wget curl aria2
-                zsh oh-my-zsh-git
-                parted smartmontools dosfstools exfatprogs f2fs-tools ntfs-3g bcachefs-tools btrfs-progs
-                sbctl
-                gzip zstd unzip xz tar
-                neofetch
-                openssh
-                zram-generator"
-      stderr: true
-
-    # Fonts
-    - description: "Install fonts   "
-      command: "yes | yay -Syu --needed --answerdiff None --noconfirm --sudoloop --removemake
-                otf-ibm-plex
-                noto-fonts-cjk otf-noto-sans-cjk-vf otf-noto-sans-mono-cjk-vf noto-fonts-emoji
-                otf-pretendard otf-pretendard-jp otf-pretendard-std
-                ttf-nanum-meta otf-nanum-meta ttf-d2coding ttf-d2coding-nerd ttf-nerd-fonts-symbols-mono
-                otf-kopub
-                ttf-koruri otf-mplus-git"
-      stderr: true
-
-    # Development packages
-    - description: "Install development packages   "
-      command: "yes | yay -Syu --needed --answerdiff None --noconfirm --sudoloop --removemake
-                github-cli
-                dotnet-sdk
-                nodejs-lts corepack
-                python python-pip python-numpy python-yaml"
-      stderr: true
-
-    # Cleanup package cache
-    - description: "Cleanup package cache   "
-      command: "yay -Sc --noconfirm"
-      stderr: true
-
-    # ZRAM
-    - description: "Copy zram-generator config  "
-      command: "sudo cp ./zram/zram-generator.conf /etc/systemd/zram-generator.conf"
-      stderr: true
-    - description: "Enable ZRAM   "
-      command: "sudo systemctl daemon-reload && sudo systemctl start systemd-zram-setup@zram0"
-      stderr: true
-
-    # PKGFILE
-    - description: "Update pkgfile database  "
-      command: "sudo mkdir -p /var/cache/pkgfile && sudo pkgfile --update"
-      stderr: true
-    - description: "Enable pkgfile auto-update timer  "
-      command: "sudo systemctl enable --now pkgfile-update.timer"
-      stderr: true
-
-    # TMPfs
-    - description: "Setup tmpfs for /tmp if not already present  "
-      command: "((sudo mount -av --fake | grep \"^/tmp\") > /dev/null)
-                || (sudo rm -rf /tmp/*; (echo \"\n# tmpfs for /tmp\ntmpfs /tmp tmpfs defaults,rw,noatime,mode=1777 0 0\" | sudo tee -a /etc/fstab))"
-      stderr: true
-    - description: "Setup tmpfs for $HOME/.cache if not already present  "
-      command: "((sudo mount -av --fake | grep \"^$HOME/.cache\") > /dev/null)
-                || (rm -rf $HOME/.cache/*; (echo \"\n# tmpfs for $HOME/.cache\ntmpfs $HOME/.cache tmpfs defaults,rw,noatime,uid=$UID,gid=$GID,mode=700 0 0\" | sudo tee -a /etc/fstab))"
-      stderr: true
-    - description: "Reload fstab and mount all  "
-      command: "sudo systemctl daemon-reload && sudo mount -av"
-      stderr: true
+    # Notice about the script
+    - description: "Notice"
+      command: "echo -e '\n\n[!] For the first-time setup, please run one of the following scripts based on the OS:\n
+                 • Linux (Arch Linux based): ./somni-linux.sh\n
+                 • macOS: ./somni-macos.sh (not ready yet)\n\n'"
+      stdout: true
