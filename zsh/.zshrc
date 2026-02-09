@@ -1,7 +1,7 @@
 ####### somni.dotfiles.linux #######
 ## ZSH + Oh My Zsh Configurations ##
 
-# ** Oh My Zsh settings **
+### ** Oh My Zsh settings **
 # ** Refer to the official documentation for more details: https://github.com/ohmyzsh/ohmyzsh/wiki
 # Path to Oh My Zsh installation
 ZSH=/usr/share/oh-my-zsh/
@@ -27,7 +27,13 @@ fi
 # Finally load Oh My Zsh
 source $ZSH/oh-my-zsh.sh
 
-# ** Personal customizations **
+### ** Helpers **
+# Register pkgfile "command-not-found" handler
+if [[ -f /usr/share/doc/pkgfile/command-not-found.zsh ]]; then
+  source /usr/share/doc/pkgfile/command-not-found.zsh
+fi
+
+### ** Personal customizations **
 # Add local binary directories to the PATH
 export PATH=$HOME/bin:$HOME/.local/bin:$PATH
 

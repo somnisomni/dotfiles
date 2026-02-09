@@ -81,3 +81,11 @@
     - description: "Enable ZRAM   "
       command: "sudo systemctl daemon-reload && sudo systemctl start systemd-zram-setup@zram0"
       stderr: true
+
+    # PKGFILE
+    - description: "Update pkgfile database  "
+      command: "sudo pkgfile --update"
+      stderr: true
+    - description: "Enable pkgfile auto-update timer  "
+      command: "sudo systemctl enable --now pkgfile-update.timer"
+      stderr: true
