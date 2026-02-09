@@ -84,7 +84,7 @@
 
     # PKGFILE
     - description: "Update pkgfile database  "
-      command: "sudo pkgfile --update"
+      command: "sudo mkdir -p /var/cache/pkgfile && sudo pkgfile --update"
       stderr: true
     - description: "Enable pkgfile auto-update timer  "
       command: "sudo systemctl enable --now pkgfile-update.timer"
