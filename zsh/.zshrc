@@ -27,12 +27,6 @@ fi
 # Finally load Oh My Zsh
 source $ZSH/oh-my-zsh.sh
 
-### ** Helpers **
-# Register pkgfile "command-not-found" handler
-if [[ -f /usr/share/doc/pkgfile/command-not-found.zsh ]]; then
-  source /usr/share/doc/pkgfile/command-not-found.zsh
-fi
-
 ### ** Personal customizations **
 # Add local binary directories to the PATH
 export PATH=$HOME/bin:$HOME/.local/bin:$PATH
