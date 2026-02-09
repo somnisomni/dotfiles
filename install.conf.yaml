@@ -60,9 +60,9 @@
                 otf-ibm-plex
                 noto-fonts-cjk otf-noto-sans-cjk-vf otf-noto-sans-mono-cjk-vf noto-fonts-emoji
                 otf-pretendard otf-pretendard-jp otf-pretendard-std
-                ttf-nanum ttf-d2coding ttf-nerd-fonts-symbols
+                ttf-nanum-meta otf-nanum-meta ttf-d2coding ttf-d2coding-nerd ttf-nerd-fonts-symbols-mono
                 otf-kopub
-                ttf-koruri ttf-mplus-git"
+                ttf-koruri otf-mplus-git"
       stderr: true
 
     # Development packages

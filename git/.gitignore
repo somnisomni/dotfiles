@@ -1,7 +1,7 @@
 #### somni.dotfiles.linux ####
 ##    Global Git Ignores    ##
 
-# ** Backup files **
+### ** Backup files **
 *~
 ~*
 *.[Bb]kup
@@ -11,33 +11,33 @@
 /[Bb]ackup/
 /[Bb]ackups/
 
-# ** Cache files **
+### ** Cache files **
 /.[Cc]ache/
 /[Cc]ache/
 /[Cc]aches/
 *.[Cc]ache
 *.[Cc]aches
 
-# ** Temporary files **
+### ** Temporary files **
 /.[Tt]emp/
 /[Tt]emp/
 /[Tt]emporary/
 *.[Tt]mp
 *.[Tt]emp
 
-# ** Auto generated files and trash folders on macOS **
+### ** Auto generated files and trash folders on macOS **
 .DS_Store
 .Spotlight-V100
 .fseventsd
 .Trashes
 
-# ** Auto generated files on Windows **
+### ** Auto generated files on Windows **
 Thumbs.db
 
 # ** Auto generated files and trash folders on Linux **
 .Trash-*
 
-# ** Log files **
+### ** Log files **
 /[Ll]og/
 /[Ll]ogs/
 *.[Ll]og
@@ -45,6 +45,6 @@ Thumbs.db
 *.[Ll]og.*
 *.[Ll]ogs.*
 
-# ** Local-specific files **
+### ** Local-specific files **
 *.[Ll]ocal
 *.[Ll]ocal.*

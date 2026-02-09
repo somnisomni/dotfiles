@@ -1,40 +1,40 @@
 ##### somni.dotfiles.linux #####
 ## Global  Git Configurations ##
 
-# ** User information **
+### ** User information **
 [user]
   name = somni
   email = me@somni.one
   signingKey = 782CAE24A5B51DE9
 
-# ** Core settings **
+### ** Core settings **
 [core]
   excludesFile = ~/.gitignore
   untrackedCache = true
   ignoreCase = false
   autoCrlf = input
 
-# ** Commit settings **
+### ** Commit settings **
 [commit]
   gpgSign = true
 
-# ** Repository initialization settings **
+### ** Repository initialization settings **
 [init]
   defaultBranch = main
 
-# ** Pull settings **
+### ** Pull settings **
 [pull]
   rebase = true
 
-# ** Help function settings **
+### ** Help function settings **
 [help]
   autoCorrect = 1
 
-# ** CLI color settings **
+### ** CLI color settings **
 [color]
   ui = auto
 
-# ** GitHub authentication using GitHub CLI **
+### ** GitHub authentication using GitHub CLI **
 [credential "https://github.com"]
 	helper =
 	helper = !/usr/bin/gh auth git-credential
@@ -43,7 +43,7 @@
 	helper =
 	helper = !/usr/bin/gh auth git-credential
 
-# ** Git LFS **
+### ** Git LFS **
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
