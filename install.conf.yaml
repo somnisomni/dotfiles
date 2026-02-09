@@ -36,7 +36,7 @@
       command: "yes | sudo pacman -Syu --noconfirm yay"
       stderr: true
     - description: "Setting up yay   "
-      command: "yay -S --save --removemake --devel --editmenu --editor 'nano'"
+      command: "yay -S --save --removemake --devel --editmenu --editor 'nano' && yay -Syyu --noconfirm"
       stderr: true
 
     # Core packages
@@ -70,8 +70,13 @@
       command: "yes | yay -Syu --needed --answerdiff None --noconfirm --sudoloop --removemake
                 github-cli
                 dotnet-sdk
-                nvm
+                nodejs-lts corepack
                 python python-pip python-numpy python-yaml"
+      stderr: true
+
+    # Cleanup package cache
+    - description: "Cleanup package cache   "
+      command: "yay -Sc --noconfirm"
       stderr: true
 
     # ZRAM
@@ -88,4 +93,17 @@
       stderr: true
     - description: "Enable pkgfile auto-update timer  "
       command: "sudo systemctl enable --now pkgfile-update.timer"
+      stderr: true
+
+    # TMPfs
+    - description: "Setup tmpfs for /tmp if not already present  "
+      command: "((sudo mount -av --fake | grep \"^/tmp\") > /dev/null)
+                || (sudo rm -rf /tmp/*; (echo \"\n# tmpfs for /tmp\ntmpfs /tmp tmpfs defaults,rw,noatime,mode=1777 0 0\" | sudo tee -a /etc/fstab))"
+      stderr: true
+    - description: "Setup tmpfs for $HOME/.cache if not already present  "
+      command: "((sudo mount -av --fake | grep \"^$HOME/.cache\") > /dev/null)
+                || (rm -rf $HOME/.cache/*; (echo \"\n# tmpfs for $HOME/.cache\ntmpfs $HOME/.cache tmpfs defaults,rw,noatime,uid=$UID,gid=$GID,mode=700 0 0\" | sudo tee -a /etc/fstab))"
+      stderr: true
+    - description: "Reload fstab and mount all  "
+      command: "sudo systemctl daemon-reload && sudo mount -av"
       stderr: true
