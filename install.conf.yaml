@@ -26,6 +26,13 @@
     ~/.config/kitty/kitty.conf: kitty/kitty.conf
     ~/.config/kitty/themes/Pnevma.conf: kitty/themes/Pnevma.conf
 
+    # Fcitx 5
+    ~/.config/fcitx5/config: fcitx5/config
+    ~/.config/fcitx5/profile: fcitx5/profile
+    ~/.config/fcitx5/conf/hangul.conf: fcitx5/conf/hangul.conf
+    ~/.config/fcitx5/conf/mozc.conf: fcitx5/conf/mozc.conf
+    ~/.config/fcitx5/conf/waylandim.conf: fcitx5/conf/waylandim.conf
+
 - shell:
     # Notice about the script
     - description: "Notice"
