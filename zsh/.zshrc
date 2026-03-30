@@ -1,6 +1,18 @@
 ####### somni.dotfiles.linux #######
 ## ZSH + Oh My Zsh Configurations ##
 
+### ** Personal customizations **
+# Add local binary directories to the PATH
+export PATH=$HOME/bin:$HOME/.local/bin:$PATH
+
+# Set `nano` as default CLI editor
+export EDITOR="nano"
+
+# `ls` aliases
+alias ls='ls --group-directories-first --color=auto'
+alias ll='ls -laFh'
+alias l='ls -ACF'
+
 ### ** Oh My Zsh settings **
 # ** Refer to the official documentation for more details: https://github.com/ohmyzsh/ohmyzsh/wiki
 # Path to Oh My Zsh installation
@@ -26,15 +38,3 @@ fi
 
 # Finally load Oh My Zsh
 source $ZSH/oh-my-zsh.sh
-
-### ** Personal customizations **
-# Add local binary directories to the PATH
-export PATH=$HOME/bin:$HOME/.local/bin:$PATH
-
-# Set `nano` as default CLI editor
-export EDITOR="nano"
-
-# `ls` aliases
-alias ls='ls --group-directories-first --color=auto'
-alias ll='ls -laFh'
-alias l='ls -ACF'

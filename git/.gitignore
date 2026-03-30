@@ -33,8 +33,10 @@
 
 ### ** Auto generated files on Windows **
 Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
 
-# ** Auto generated files and trash folders on Linux **
+### ** Auto generated files and trash folders on Linux **
 .Trash-*
 
 ### ** Log files **
