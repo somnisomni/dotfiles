@@ -97,6 +97,12 @@ yes | yay -S --needed --answerdiff None --noconfirm --sudoloop --removemake \
       nodejs-lts corepack \
       python python-pip python-numpy python-yaml
 
+### ** Install EasyEffects and dependencies **
+msg "\n[*] Installing EasyEffects and dependencies..."
+yes | yay -S --needed --answerdiff None --noconfirm --sudoloop --removemake \
+      easyeffects \
+      calf-no-gui lsp-plugins-lv2 lsp-plugins-vst3
+
 ### ** Cleanup package cache **
 msg "\n[*] Cleaning up package cache..."
 yay -Sc --noconfirm
