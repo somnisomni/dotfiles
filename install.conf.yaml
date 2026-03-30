@@ -34,6 +34,9 @@
     ~/.config/fcitx5/conf/mozc.conf: fcitx5/conf/mozc.conf
     ~/.config/fcitx5/conf/waylandim.conf: fcitx5/conf/waylandim.conf
 
+    # PipeWire
+    ~/.config/pipewire/pipewire.conf.d/somni.conf: pipewire/somni.conf
+
     # EasyEffects
     ~/.local/share/easyeffects/output: easyeffects/output
     ~/.local/share/easyeffects/autoload: easyeffects/autoload

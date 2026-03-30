@@ -170,5 +170,9 @@ sudo ln -sf $HOME/.zshrc /root/.zshrc
 sudo ln -sf $HOME/.zprofile /root/.zprofile
 sudo ln -sf $HOME/.p10k.zsh /root/.p10k.zsh
 
+### ** Adjust current user's group memberships
+msg "\n[*] Adjusting current user's group memberships..."
+sudo usermod -aG audio,video,network $USER
+
 ### ** Setup complete **
 msg "\n[*] Linux system first-time setup is complete! Reboot is recommended."
