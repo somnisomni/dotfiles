@@ -29,9 +29,11 @@ fi
 ### ** Let's pollute the system ;) **
 TARGET_VARIANT="Customized by somni"
 if (grep -iE "^VARIANT=" /etc/os-release >/dev/null 2>&1); then
-  sudo sed -iE "s/^(VARIANT=)(\"?)([^\"]*)(\"?)$/\1\"\3 ($TARGET_VARIANT)\"/" /etc/os-release
+  if ! (grep -iE "^VARIANT=.*${TARGET_VARIANT}.*" /etc/os-release >/dev/null 2>&1); then
+    sudo sed -i -E 's|^(VARIANT=)\"?([^\"]*)\"?$|\1\"\2 ('"${TARGET_VARIANT}"')\"|' /etc/os-release
+  fi
 else
-  echo "VARIANT=\"$TARGET_VARIANT\"" | sudo tee -a /etc/os-release
+  echo "VARIANT=\"$TARGET_VARIANT\"" | sudo tee -a /etc/os-release > /dev/null
 fi
 
 ### ** Install & setup yay **
@@ -74,7 +76,7 @@ msg "\n[*] Installing core packages..."
 yes | yay -S --needed --answerdiff None --noconfirm --sudoloop --removemake \
       git git-lfs gnupg \
       nano wget curl aria2 \
-      zsh oh-my-zsh-git \
+      zsh oh-my-zsh-git zsh-theme-powerlevel10k-bin-git zsh-autosuggestions zsh-syntax-highlighting \
       parted smartmontools dosfstools exfatprogs ntfsplus-dkms-git ntfsprogs-plus f2fs-tools bcachefs-tools btrfs-progs lvm2 \
       sbctl zram-generator openssh \
       gzip zstd zip unzip xz tar 7zip-zstd-bin \
@@ -86,7 +88,7 @@ yes | yay -S --needed --answerdiff None --noconfirm --sudoloop --removemake \
       otf-ibm-plex noto-fonts-cjk noto-fonts-emoji \
       otf-pretendard otf-pretendard-jp otf-pretendard-std \
       ttf-nanum-meta otf-nanum-meta otf-kopub \
-      ttf-d2coding ttf-d2coding-nerd ttf-nerd-fonts-symbols-mono \
+      ttf-d2coding ttf-d2coding-nerd ttf-nerd-fonts-symbols \
       ttf-koruri otf-mplus-git
 
 ### ** Install development packages **
@@ -123,7 +125,7 @@ msg "\n[*] Starting ZRAM service..."
 sudo systemctl daemon-reload
 sudo systemctl start systemd-zram-setup@zram0
 
-### ** Setup tmpfs **
+### ** Setup tmpfs for '/tmp' **
 msg "\n[*] Setting up tmpfs for '/tmp'..."
 if (sudo mount -av --fake | grep "^/tmp") > /dev/null 2>&1; then
   msg "  └ '/tmp' mountpoint is already present, skipping setup."
@@ -140,6 +142,7 @@ else
   fi
 fi
 
+### ** Setup tmpfs for '$HOME/.cache' **
 msg "\n[*] Setting up tmpfs for '$HOME/.cache'..."
 if (sudo mount -av --fake | grep "^$HOME/.cache") > /dev/null 2>&1; then
   msg "  └ '$HOME/.cache' mountpoint is already present, skipping setup."
@@ -156,9 +159,16 @@ else
   fi
 fi
 
+### ** Reload fstab and mount all tmpfs entries **
 msg "\n[*] Reloading fstab and mounting all tmpfs entries..."
 sudo systemctl daemon-reload
 sudo mount -av > /dev/null 2>&1
 
+### ** Symlink user zsh configurations to root home **
+msg "\n[*] Symlinking user zsh configurations to root home..."
+sudo ln -sf $HOME/.zshrc /root/.zshrc
+sudo ln -sf $HOME/.zprofile /root/.zprofile
+sudo ln -sf $HOME/.p10k.zsh /root/.p10k.zsh
+
 ### ** Setup complete **
-msg "\n[*] Linux system first-time setup is complete!"
+msg "\n[*] Linux system first-time setup is complete! Reboot is recommended."
