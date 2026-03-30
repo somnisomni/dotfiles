@@ -1,0 +1,6 @@
+{
+    "device": "alsa_output.pci-0000_0c_00.4.iec958-stereo",
+    "device-description": "LG SK1 - S/PDIF",
+    "device-profile": "iec958-stereo-output",
+    "preset-name": "somni LG-SK1"
+}

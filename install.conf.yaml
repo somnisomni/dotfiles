@@ -33,6 +33,10 @@
     ~/.config/fcitx5/conf/mozc.conf: fcitx5/conf/mozc.conf
     ~/.config/fcitx5/conf/waylandim.conf: fcitx5/conf/waylandim.conf
 
+    # EasyEffects
+    ~/.local/share/easyeffects/output: easyeffects/output
+    ~/.local/share/easyeffects/autoload: easyeffects/autoload
+
 - shell:
     # Notice about the script
     - description: "Notice"
