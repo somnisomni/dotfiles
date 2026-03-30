@@ -9,7 +9,7 @@ function msg() {
 }
 
 ### ** Check if the OS is based on Arch Linux **
-if ([[ -f /etc/arch-release ]] && (grep -iE "^ID=[\"\']?arch[\"\']?$|^ID_LIKE=[\"\']?arch[\"\']?$" /etc/os-release >/dev/null 2>&1)); then
+if (grep -iE "^ID=[\"\']?arch[\"\']?$|^ID_LIKE=[\"\']?arch[\"\']?$" /etc/os-release >/dev/null 2>&1); then
   msg "[*] Checked: Arch Linux based system detected."
 else
   msg "[!] This setup script is intended for Arch Linux based systems only. Exiting."
@@ -26,11 +26,30 @@ fi
 
 ### ** All checks passed, proceed with the setup **
 
+### ** Let's pollute the system ;) **
+TARGET_VARIANT="Customized by somni"
+if (grep -iE "^VARIANT=" /etc/os-release >/dev/null 2>&1); then
+  sudo sed -iE "s/^(VARIANT=)(\"?)([^\"]*)(\"?)$/\1\"\3 ($TARGET_VARIANT)\"/" /etc/os-release
+else
+  echo "VARIANT=\"$TARGET_VARIANT\"" | sudo tee -a /etc/os-release
+fi
+
 ### ** Install & setup yay **
 msg "\n[*] Install yay if not already installed..."
 if ! command -v yay > /dev/null 2>&1; then
   msg "  └ yay not found. Installing yay..."
-  yes | sudo pacman -Syu --noconfirm yay
+
+  # Install essential packages and clone the repository
+  yes | sudo pacman -S --needed git base-devel
+  git clone https://aur.archlinux.org/yay-bin.git
+
+  # Build and install
+  cd yay-bin
+  makepkg -si
+
+  # Cleanup
+  cd ..
+  rm -rf yay-bin
 
   if command -v yay > /dev/null 2>&1; then
     msg "  └ yay installed successfully."
@@ -44,6 +63,7 @@ fi
 
 msg "\n[*] Setting up yay..."
 yay -S --save --removemake --devel --editmenu --editor nano
+yes | yay -S yay-bin
 
 ### ** Initial package database refresh and system upgrade **
 msg "\n[*] Performing full package database refresh and system upgrade..."
