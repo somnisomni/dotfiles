@@ -79,7 +79,7 @@ yes | yay -S --needed --answerdiff None --noconfirm --sudoloop --removemake \
       zsh oh-my-zsh-git zsh-theme-powerlevel10k-bin-git zsh-autosuggestions zsh-syntax-highlighting \
       parted smartmontools dosfstools exfatprogs ntfsplus-dkms-git ntfsprogs-plus f2fs-tools bcachefs-tools btrfs-progs lvm2 \
       sbctl zram-generator openssh \
-      gzip zstd zip unzip xz tar 7zip-zstd-bin \
+      gzip zstd zip unzip xz tar 7zip \
       lm_sensors nvme-cli fastfetch
 
 ### ** Install fonts **
@@ -89,7 +89,7 @@ yes | yay -S --needed --answerdiff None --noconfirm --sudoloop --removemake \
       otf-pretendard otf-pretendard-jp otf-pretendard-std \
       ttf-nanum-meta otf-nanum-meta otf-kopub \
       ttf-d2coding ttf-d2coding-nerd ttf-nerd-fonts-symbols \
-      ttf-koruri otf-mplus-git
+      ttf-koruri
 
 ### ** Install development packages **
 msg "\n[*] Installing development packages..."
@@ -138,23 +138,6 @@ else
     msg "  └ Successfully added fstab entry for /tmp."
   else
     msg "  └ Failed to add fstab entry for /tmp."
-    exit 1
-  fi
-fi
-
-### ** Setup tmpfs for '$HOME/.cache' **
-msg "\n[*] Setting up tmpfs for '$HOME/.cache'..."
-if (sudo mount -av --fake | grep "^$HOME/.cache") > /dev/null 2>&1; then
-  msg "  └ '$HOME/.cache' mountpoint is already present, skipping setup."
-else
-  msg "  └ '$HOME/.cache' mountpoint is not set up. Setting up tmpfs..."
-  rm -rf $HOME/.cache/*
-  msg "\n# tmpfs for $HOME/.cache\ntmpfs $HOME/.cache tmpfs defaults,rw,noatime,uid=$UID,gid=$GID,mode=700 0 0" | sudo tee -a /etc/fstab
-
-  if $? -eq 0; then
-    msg "  └ Successfully added fstab entry for $HOME/.cache."
-  else
-    msg "  └ Failed to add fstab entry for $HOME/.cache."
     exit 1
   fi
 fi
