@@ -1,0 +1,240 @@
+// #### somni.dotfiles.linux ####
+// ##   Niri  Configurations   ##
+
+// # Environment variables
+environment {
+    // Working with KDE applications
+    QT_QPA_PLATFORM "wayland"
+    QT_WAYLAND_DISABLE_WINDOWDECORATION "0"
+    QT_QPA_PLATFORMTHEME "qt6ct"
+    QT_QPA_PLATFORMTHEME_QT6 "qt6ct"
+    
+    // Default applications
+    NIRI_TERMINAL "kitty"
+    NIRI_BROWSER "vivaldi"
+    NIRI_FILE_MANAGER "dolphin"
+    QUICKSHELL_CONFIG_NAME "noctalia-shell"
+}
+
+// # Input device configurations
+input {
+    // Keyboard
+    keyboard {
+        repeat-delay 300
+        repeat-rate 25
+        numlock
+    }
+
+    // Mouse
+    mouse {
+        // No additional configs for mouse
+    }
+
+    // Touchpad
+    touchpad {
+        tap
+        drag true
+        scroll-method "two-finger"
+    }
+
+    // Mod key
+    mod-key "Super"
+    mod-key-nested "Alt"
+}
+
+// # Output device configurations
+//   Various output configuraions are located in "outputs" subfolder.
+//   Pick one that matches with the hardware and copy the file as "local.kdl" in same folder or create one from scratch.
+//   The "local.kdl" file will not be included in dotfiles tree.
+include optional=true "./outputs/local.kdl"
+
+// # Global layout configurations
+layout {
+    // Gaps between columns
+    gaps 16
+
+    // Column positioning
+    center-focused-column "never"
+    always-center-single-column
+
+    // Column sizing
+    default-column-width { proportion 0.5; }
+    preset-column-widths {
+        proportion 0.25
+        proportion 0.3333333333
+        proportion 0.5
+        proportion 0.6666666667
+        proportion 0.75
+        proportion 1.0
+    }
+
+    // Enable thin focus ring
+    focus-ring {
+        on
+        width 0.5
+    }
+
+    // Disable border
+    border {
+        off
+    }
+
+    // Enable shadow
+    shadow {
+        on
+        softness 20
+        spread 5
+        offset x=0 y=0
+        draw-behind-window false
+    }
+
+    // Make Noctalia-driven overview wallpaper to be shown
+    background-color "transparent"
+}
+
+// # Global window decorations
+window-rule {
+    // Corner radius
+    geometry-corner-radius 10
+    clip-to-geometry true
+
+    // Enable background blur effect and disable X-ray effect
+    background-effect {
+        blur true
+        xray false
+    }
+
+    // Disable drawing border with background
+    draw-border-with-background false
+}
+
+// # Named workspaces - Development
+workspace "dev" {
+    layout {
+        default-column-width { proportion 0.75; }
+    }
+}
+
+// # Key bindings
+binds {
+    // #"Niri fundamentals"
+    // disabled: Mod+Slash repeat=false hotkey-overlay-title="Show hotkey list overlay" { show-hotkey-overlay; }
+    Mod+Grave repeat=false hotkey-overlay-title="Toggle Overview"                    { toggle-overview; }
+    Print     repeat=false hotkey-overlay-title="Take a screenshot"                  { screenshot; }
+    Mod+Print repeat=false hotkey-overlay-title="Take a screenshot of whole screen"  { screenshot-screen; }
+    Alt+Print repeat=false hotkey-overlay-title="Take a screenshot of active window" { screenshot-window; }
+
+    // #"Window/column manipulations"
+    Mod+Q            repeat=false hotkey-overlay-title="Close focused window"           { close-window; }
+    Alt+F4           repeat=false hotkey-overlay-title="Close focused window"           { close-window; }
+    Mod+F            repeat=false hotkey-overlay-title="Maximize a column"              { maximize-column; }
+    Mod+Ctrl+F       repeat=false hotkey-overlay-title="Maximize a window edge-to-edge" { maximize-window-to-edges; }
+    Mod+Left         cooldown-ms=100 hotkey-overlay-title="Focus left column"           { focus-column-left; }
+    Mod+Right        cooldown-ms=100 hotkey-overlay-title="Focus right column"          { focus-column-right; }
+    Mod+Ctrl+Left    cooldown-ms=500 hotkey-overlay-title="Move column to left"         { move-column-left; }
+    Mod+Ctrl+Right   cooldown-ms=500 hotkey-overlay-title="Move column to right"        { move-column-right; }
+    Mod+Home         repeat=false hotkey-overlay-title="Focus first column"             { focus-column-first; }
+    Mod+End          repeat=false hotkey-overlay-title="Focus last column"              { focus-column-last; }
+    Mod+Ctrl+Home    repeat=false hotkey-overlay-title="Move column to first"           { move-column-to-first; }
+    Mod+Ctrl+End     repeat=false hotkey-overlay-title="Move column to last"            { move-column-to-last; }
+    Mod+BracketLeft  cooldown-ms=100 hotkey-overlay-title="Cycle column width back"     { switch-preset-column-width-back; }
+    Mod+BracketRight cooldown-ms=100 hotkey-overlay-title="Cycle column width forth"    { switch-preset-column-width; }
+
+    // #"Workspace manipulations"
+    Mod+Up         cooldown-ms=100 hotkey-overlay-title="Focus previous workspace"          { focus-workspace-up; }
+    Mod+Down       cooldown-ms=100 hotkey-overlay-title="Focus next workspace"              { focus-workspace-down; }
+    Mod+Ctrl+Up    cooldown-ms=500 hotkey-overlay-title="Move column to previous workspace" { move-column-to-workspace-up; }
+    Mod+Ctrl+Down  cooldown-ms=500 hotkey-overlay-title="Move column to next workspace"     { move-column-to-workspace-down; }
+    Mod+1          repeat=false hotkey-overlay-title="Focus workspace to index 1"           { focus-workspace 1; }
+    Mod+2          repeat=false hotkey-overlay-title="Focus workspace to index 2"           { focus-workspace 2; }
+    Mod+3          repeat=false hotkey-overlay-title="Focus workspace to index 3"           { focus-workspace 3; }
+    Mod+4          repeat=false hotkey-overlay-title="Focus workspace to index 4"           { focus-workspace 4; }
+    Mod+5          repeat=false hotkey-overlay-title="Focus workspace to index 5"           { focus-workspace 5; }
+    Mod+6          repeat=false hotkey-overlay-title="Focus workspace to index 6"           { focus-workspace 6; }
+    Mod+7          repeat=false hotkey-overlay-title="Focus workspace to index 7"           { focus-workspace 7; }
+    Mod+8          repeat=false hotkey-overlay-title="Focus workspace to index 8"           { focus-workspace 8; }
+    Mod+9          repeat=false hotkey-overlay-title="Focus workspace to index 9"           { focus-workspace 9; }
+
+    // #"Application shortcuts"
+    Mod+T repeat=false hotkey-overlay-title="Open a terminal"     { spawn-sh "$NIRI_TERMINAL"; }
+    Mod+E repeat=false hotkey-overlay-title="Open a file manager" { spawn-sh "$NIRI_FILE_MANAGER"; }
+    Mod+R repeat=false hotkey-overlay-title="Open a web browser"  { spawn-sh "$NIRI_BROWSER"; }
+
+    // #"Noctalia Shell behaviors"
+    Mod+Slash         repeat=false hotkey-overlay-title="Show hotkey list overlay"               { spawn-sh "qs -c $QUICKSHELL_CONFIG_NAME ipc call plugin:keybind-cheatsheet toggle"; }
+    Mod+L             repeat=false hotkey-overlay-title="[Noctalia] Lock the screen"             { spawn-sh "qs -c $QUICKSHELL_CONFIG_NAME ipc call lockScreen lock"; }
+    Mod+Space         repeat=false hotkey-overlay-title="[Noctalia] Toggle application launcher" { spawn-sh "qs -c $QUICKSHELL_CONFIG_NAME ipc call launcher toggle"; }
+    Mod+Period        repeat=false hotkey-overlay-title="[Noctalia] Toggle Emoji selector"       { spawn-sh "qs -c $QUICKSHELL_CONFIG_NAME ipc call launcher emoji"; }
+    Mod+Comma         repeat=false hotkey-overlay-title="[Noctalia] Show clipboard history"      { spawn-sh "qs -c $QUICKSHELL_CONFIG_NAME ipc call launcher clipboard"; }
+    Mod+Apostrophe    repeat=false hotkey-overlay-title="[Noctalia] Show window switcher"        { spawn-sh "qs -c $QUICKSHELL_CONFIG_NAME ipc call launcher windows"; }
+    Mod+Escape        repeat=false hotkey-overlay-title="[Noctalia] Toggle session menu"         { spawn-sh "qs -c $QUICKSHELL_CONFIG_NAME ipc call sessionMenu toggle"; }
+    Ctrl+Alt+Delete   repeat=false hotkey-overlay-title="[Noctalia] Toggle session menu"         { spawn-sh "qs -c $QUICKSHELL_CONFIG_NAME ipc call sessionMenu toggle"; }
+    Ctrl+Shift+Escape repeat=false hotkey-overlay-title="[Noctalia] Show system monitor"         { spawn-sh "qs -c $QUICKSHELL_CONFIG_NAME ipc call systemMonitor toggle"; }
+    
+    // #"Media controls" (playerctl) with keypad-driven fallbacks
+    Mod+KP_Right       allow-when-locked=true repeat=false hotkey-overlay-title="Media control - Next"       { spawn "playerctl" "next"; }
+    XF86AudioNext      allow-when-locked=true repeat=false hotkey-overlay-title="Media control - Next"       { spawn "playerctl" "next"; }
+    Mod+KP_Left        allow-when-locked=true repeat=false hotkey-overlay-title="Media control - Previous"   { spawn "playerctl" "previous"; }
+    XF86AudioPrev      allow-when-locked=true repeat=false hotkey-overlay-title="Media control - Previous"   { spawn "playerctl" "previous"; }
+    Mod+KP_Begin       allow-when-locked=true repeat=false hotkey-overlay-title="Media control - Play/Pause" { spawn "playerctl" "play-pause"; }
+    XF86AudioPlay      allow-when-locked=true repeat=false hotkey-overlay-title="Media control - Play/Pause" { spawn "playerctl" "play-pause"; }
+    Mod+Shift+KP_Begin allow-when-locked=true repeat=false hotkey-overlay-title="Media control - Stop"       { spawn "playerctl" "stop"; }
+    XF86AudioStop      allow-when-locked=true repeat=false hotkey-overlay-title="Media control - Stop"       { spawn "playerctl" "stop"; }
+
+    // #"Audio controls" (PipeWire + WirePlumber) with keypad-driven fallbacks
+    Mod+KP_Prior             allow-when-locked=true cooldown-ms=50 hotkey-overlay-title="Raise audio output volume" { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0"; }
+    XF86AudioRaiseVolume     allow-when-locked=true cooldown-ms=50 hotkey-overlay-title="Raise audio output volume" { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0"; }
+    Mod+KP_Home              allow-when-locked=true cooldown-ms=50 hotkey-overlay-title="Lower audio output volume" { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05- -l 0.0"; }
+    XF86AudioLowerVolume     allow-when-locked=true cooldown-ms=50 hotkey-overlay-title="Lower audio output volume" { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05- -l 0.0"; }
+    Mod+Shift+KP_Prior       allow-when-locked=true cooldown-ms=50 hotkey-overlay-title="Raise audio input volume"  { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 0.05+ -l 1.0"; }
+    Mod+XF86AudioRaiseVolume allow-when-locked=true cooldown-ms=50 hotkey-overlay-title="Raise audio input volume"  { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 0.05+ -l 1.0"; }
+    Mod+Shift+KP_Home        allow-when-locked=true cooldown-ms=50 hotkey-overlay-title="Lower audio input volume"  { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 0.05- -l 0.0"; }
+    Mod+XF86AudioLowerVolume allow-when-locked=true cooldown-ms=50 hotkey-overlay-title="Lower audio input volume"  { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 0.05- -l 0.0"; }
+    Mod+KP_Up                allow-when-locked=true cooldown-ms=50 hotkey-overlay-title="Mute audio output"         { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    XF86AudioMute            allow-when-locked=true cooldown-ms=50 hotkey-overlay-title="Mute audio output"         { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    Mod+Shift+KP_Up          allow-when-locked=true cooldown-ms=50 hotkey-overlay-title="Mute audio input"          { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+    Mod+XF86AudioMute        allow-when-locked=true cooldown-ms=50 hotkey-overlay-title="Mute audio input"          { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+    XF86AudioMicMute         allow-when-locked=true cooldown-ms=50 hotkey-overlay-title="Mute audio input"          { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+
+    // #"Display controls" (brightnessctl)
+    XF86MonBrightnessUp      allow-when-locked=true cooldown-ms=50 hotkey-overlay-title="Increase screen brightness" { spawn "brightnessctl" "--class=backlight" "-n1" "set" "+5%"; }
+    XF86MonBrightnessDown    allow-when-locked=true cooldown-ms=50 hotkey-overlay-title="Decrease screen brightness" { spawn "brightnessctl" "--class=backlight" "-n1" "set" "5%-"; }
+}
+
+// # Noctalia Shell - blurred overview wallpaper
+layer-rule {
+    match namespace="^noctalia-overview*"
+    place-within-backdrop true
+}
+
+// # Omit client-side decorations
+//   This prevents a solid colored background from the focus ring to be drawn behind some windows with semi-transparent background.
+//   Reference: https://niri-wm.github.io/niri/Configuration%3A-Miscellaneous.html#prefer-no-csd
+prefer-no-csd
+
+// # Allow xdg-activation tokens with invalid serials
+//   This is a workaround for notifications from some applications
+//   Reference: https://niri-wm.github.io/niri/Configuration%3A-Debug-Options.html#honor-xdg-activation-with-invalid-serial
+debug {
+    honor-xdg-activation-with-invalid-serial
+}
+
+// # Hide unbounded hotkeys from hotkey overlay
+hotkey-overlay {
+    skip-at-startup
+    hide-not-bound
+}
+
+// # Screenshot configurations
+screenshot-path "~/Pictures/Screenshots/Screenshot_%Y%m%d%H%M%S.png"
+
+// # Auto start programs
+spawn-at-startup    "env" "XDG_MENU_PREFIX=arch-" "kbuildsycoca6" "--noincremental"  // Build desktop menu for file association in Dolphin
+spawn-sh-at-startup "niri msg action focus-workspace 2"                              // Focus first unnamed workspace
+spawn-sh-at-startup "qs -c $QUICKSHELL_CONFIG_NAME -d"                               // Noctalia Shell
+
+// # Noctalia Shell color scheme
+//   This should be autogenerated by Noctalia Shell, thus will not be included in dotfiles tree.
+//   Enable BOTH built-in Niri template and user custom template.
+include optional=true "./noctalia-somni.kdl"
+include "./noctalia.kdl"

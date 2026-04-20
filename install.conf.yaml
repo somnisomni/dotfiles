@@ -41,6 +41,13 @@
     ~/.local/share/easyeffects/output: easyeffects/output
     ~/.local/share/easyeffects/autoload: easyeffects/autoload
 
+    # Niri & Noctalia Shell
+    ~/.config/niri: niri/niri
+    ~/.config/noctalia/settings.json: niri/noctalia/settings.json
+    ~/.config/noctalia/plugins.json: niri/noctalia/plugins.json
+    ~/.config/noctalia/user-templates.toml: niri/noctalia/user-templates.toml
+    ~/.config/noctalia/templates: niri/noctalia/templates
+
 - shell:
     # Notice about the script
     - description: "Notice"

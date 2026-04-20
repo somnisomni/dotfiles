@@ -1,0 +1,21 @@
+layout {
+    shadow {
+        color "{{ colors.shadow.default.hex }}70"
+    }
+}
+
+window-rule {
+    match is-focused=true
+
+    shadow {
+        color "{{ colors.primary.default.hex }}70"
+    }
+}
+
+window-rule {
+    match is-urgent=true
+
+    shadow {
+        color "{{ colors.error.default.hex }}70"
+    }
+}

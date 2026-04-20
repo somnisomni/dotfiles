@@ -1,0 +1,5 @@
+output "eDP-1" {
+    mode custom=true "2880x1620@61.500"
+    scale 1.5
+    focus-at-startup
+}

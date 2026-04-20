@@ -1,0 +1,15 @@
+[config]
+
+[templates]
+
+[templates.niri-somni]
+input_path = "~/.config/noctalia/templates/niri-somni.kdl"
+output_path = "~/.config/niri/noctalia-somni.kdl"
+
+[templates.sysc-greet]
+input_path = "~/.config/noctalia/templates/sysc-greet.toml"
+output_path = "~/.config/sysc-greet/themes/noctalia.toml"
+
+[templates.lidm]
+input_path = "~/.config/noctalia/templates/lidm.ini"
+output_path = "~/.config/lidm/colors.ini"
