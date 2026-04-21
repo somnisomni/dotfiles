@@ -48,6 +48,9 @@
     ~/.config/noctalia/user-templates.toml: niri/noctalia/user-templates.toml
     ~/.config/noctalia/templates: niri/noctalia/templates
 
+    # Fontconfig
+    ~/.config/fontconfig: fontconfig
+    
 - shell:
     # Notice about the script
     - description: "Notice"
