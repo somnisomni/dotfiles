@@ -1,7 +1,7 @@
 // #### somni.dotfiles.linux ####
 // ##   Niri  Configurations   ##
 
-// # Environment variables
+// ### Environment variables
 environment {
     // Working with KDE applications
     QT_QPA_PLATFORM "wayland"
@@ -16,7 +16,7 @@ environment {
     QUICKSHELL_CONFIG_NAME "noctalia-shell"
 }
 
-// # Input device configurations
+// ### Input device configurations
 input {
     // Keyboard
     keyboard {
@@ -42,13 +42,13 @@ input {
     mod-key-nested "Alt"
 }
 
-// # Output device configurations
-//   Various output configuraions are located in "outputs" subfolder.
-//   Pick one that matches with the hardware and copy the file as "local.kdl" in same folder or create one from scratch.
-//   The "local.kdl" file will not be included in dotfiles tree.
+// ### Output device configurations
+//     Various output configuraions are located in "outputs" subfolder.
+//     Pick one that matches with the hardware and copy the file as "local.kdl" in same folder or create one from scratch.
+//     The "local.kdl" file will not be included in dotfiles tree.
 include optional=true "./outputs/local.kdl"
 
-// # Global layout configurations
+// ### Global layout configurations
 layout {
     // Gaps between columns
     gaps 16
@@ -92,7 +92,7 @@ layout {
     background-color "transparent"
 }
 
-// # Global window decorations
+// ### Global window decorations
 window-rule {
     // Corner radius
     geometry-corner-radius 10
@@ -108,14 +108,14 @@ window-rule {
     draw-border-with-background false
 }
 
-// # Named workspaces - Development
+// ### Named workspaces - Development
 workspace "dev" {
     layout {
         default-column-width { proportion 0.75; }
     }
 }
 
-// # Key bindings
+// ### Key bindings
 binds {
     // #"Niri fundamentals"
     // disabled: Mod+Slash repeat=false hotkey-overlay-title="Show hotkey list overlay" { show-hotkey-overlay; }
@@ -125,20 +125,22 @@ binds {
     Alt+Print repeat=false hotkey-overlay-title="Take a screenshot of active window" { screenshot-window; }
 
     // #"Window/column manipulations"
-    Mod+Q            repeat=false hotkey-overlay-title="Close focused window"           { close-window; }
-    Alt+F4           repeat=false hotkey-overlay-title="Close focused window"           { close-window; }
-    Mod+F            repeat=false hotkey-overlay-title="Maximize a column"              { maximize-column; }
-    Mod+Ctrl+F       repeat=false hotkey-overlay-title="Maximize a window edge-to-edge" { maximize-window-to-edges; }
-    Mod+Left         cooldown-ms=100 hotkey-overlay-title="Focus left column"           { focus-column-left; }
-    Mod+Right        cooldown-ms=100 hotkey-overlay-title="Focus right column"          { focus-column-right; }
-    Mod+Ctrl+Left    cooldown-ms=500 hotkey-overlay-title="Move column to left"         { move-column-left; }
-    Mod+Ctrl+Right   cooldown-ms=500 hotkey-overlay-title="Move column to right"        { move-column-right; }
-    Mod+Home         repeat=false hotkey-overlay-title="Focus first column"             { focus-column-first; }
-    Mod+End          repeat=false hotkey-overlay-title="Focus last column"              { focus-column-last; }
-    Mod+Ctrl+Home    repeat=false hotkey-overlay-title="Move column to first"           { move-column-to-first; }
-    Mod+Ctrl+End     repeat=false hotkey-overlay-title="Move column to last"            { move-column-to-last; }
-    Mod+BracketLeft  cooldown-ms=100 hotkey-overlay-title="Cycle column width back"     { switch-preset-column-width-back; }
-    Mod+BracketRight cooldown-ms=100 hotkey-overlay-title="Cycle column width forth"    { switch-preset-column-width; }
+    Mod+Q            repeat=false hotkey-overlay-title="Close focused window"                 { close-window; }
+    Alt+F4           repeat=false hotkey-overlay-title="Close focused window"                 { close-window; }
+    Mod+F            repeat=false hotkey-overlay-title="Maximize focused column"              { maximize-column; }
+    Mod+Ctrl+F       repeat=false hotkey-overlay-title="Maximize focused window edge-to-edge" { maximize-window-to-edges; }
+    Mod+V            repeat=false hotkey-overlay-title="Toggle focused window floating"       { toggle-window-floating; }
+    Mod+C            repeat=false hotkey-overlay-title="Center focused column"                { center-column; }
+    Mod+Left         cooldown-ms=100 hotkey-overlay-title="Focus left column"                 { focus-column-left; }
+    Mod+Right        cooldown-ms=100 hotkey-overlay-title="Focus right column"                { focus-column-right; }
+    Mod+Ctrl+Left    cooldown-ms=500 hotkey-overlay-title="Move column to left"               { move-column-left; }
+    Mod+Ctrl+Right   cooldown-ms=500 hotkey-overlay-title="Move column to right"              { move-column-right; }
+    Mod+Home         repeat=false hotkey-overlay-title="Focus first column"                   { focus-column-first; }
+    Mod+End          repeat=false hotkey-overlay-title="Focus last column"                    { focus-column-last; }
+    Mod+Ctrl+Home    repeat=false hotkey-overlay-title="Move column to first"                 { move-column-to-first; }
+    Mod+Ctrl+End     repeat=false hotkey-overlay-title="Move column to last"                  { move-column-to-last; }
+    Mod+BracketLeft  cooldown-ms=100 hotkey-overlay-title="Cycle column width back"           { switch-preset-column-width-back; }
+    Mod+BracketRight cooldown-ms=100 hotkey-overlay-title="Cycle column width forth"          { switch-preset-column-width; }
 
     // #"Workspace manipulations"
     Mod+Up         cooldown-ms=100 hotkey-overlay-title="Focus previous workspace"          { focus-workspace-up; }
@@ -201,40 +203,40 @@ binds {
     XF86MonBrightnessDown    allow-when-locked=true cooldown-ms=50 hotkey-overlay-title="Decrease screen brightness" { spawn "brightnessctl" "--class=backlight" "-n1" "set" "5%-"; }
 }
 
-// # Noctalia Shell - blurred overview wallpaper
+// ### Noctalia Shell - blurred overview wallpaper
 layer-rule {
     match namespace="^noctalia-overview*"
     place-within-backdrop true
 }
 
-// # Omit client-side decorations
-//   This prevents a solid colored background from the focus ring to be drawn behind some windows with semi-transparent background.
-//   Reference: https://niri-wm.github.io/niri/Configuration%3A-Miscellaneous.html#prefer-no-csd
+// ### Omit client-side decorations
+//     This prevents a solid colored background from the focus ring to be drawn behind some windows with semi-transparent background.
+//     Reference: https://niri-wm.github.io/niri/Configuration%3A-Miscellaneous.html#prefer-no-csd
 prefer-no-csd
 
-// # Allow xdg-activation tokens with invalid serials
-//   This is a workaround for notifications from some applications
-//   Reference: https://niri-wm.github.io/niri/Configuration%3A-Debug-Options.html#honor-xdg-activation-with-invalid-serial
+// ### Allow xdg-activation tokens with invalid serials
+//     This is a workaround for notifications from some applications
+//     Reference: https://niri-wm.github.io/niri/Configuration%3A-Debug-Options.html#honor-xdg-activation-with-invalid-serial
 debug {
     honor-xdg-activation-with-invalid-serial
 }
 
-// # Hide unbounded hotkeys from hotkey overlay
+// ### Hide unbounded hotkeys from hotkey overlay
 hotkey-overlay {
     skip-at-startup
     hide-not-bound
 }
 
-// # Screenshot configurations
+// ### Screenshot configurations
 screenshot-path "~/Pictures/Screenshots/Screenshot_%Y%m%d%H%M%S.png"
 
-// # Auto start programs
+// ### Auto start programs
 spawn-at-startup    "env" "XDG_MENU_PREFIX=arch-" "kbuildsycoca6" "--noincremental"  // Build desktop menu for file association in Dolphin
 spawn-sh-at-startup "niri msg action focus-workspace 2"                              // Focus first unnamed workspace
 spawn-sh-at-startup "qs -c $QUICKSHELL_CONFIG_NAME -d"                               // Noctalia Shell
 
-// # Noctalia Shell color scheme
-//   This should be autogenerated by Noctalia Shell, thus will not be included in dotfiles tree.
-//   Enable BOTH built-in Niri template and user custom template.
+// ### Noctalia Shell color scheme
+//     This should be autogenerated by Noctalia Shell, thus will not be included in dotfiles tree.
+//     Enable BOTH built-in Niri template and user custom template.
 include optional=true "./noctalia-somni.kdl"
 include "./noctalia.kdl"
