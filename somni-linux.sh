@@ -129,9 +129,12 @@ sudo systemctl start systemd-zram-setup@zram0
 msg "\n[*] Copying KMSCON configuration..."
 sudo cp ./kmscon/kmscon.conf /etc/kmscon/kmscon.conf
 
-msg "\n[*] Enabling KMSCON for all TTYs except TTY1..."
+msg "\n[*] Enabling KMSCON for all TTYs except TTY1/TTY6..."
 sudo systemctl enable kmsconvt@
+sudo systemctl disable kmsconvt@tty1
+sudo systemctl disable kmsconvt@tty6
 sudo systemctl enable getty@tty1
+sudo systemctl enable getty@tty6
 
 ### ** Setup tmpfs for '/tmp' **
 msg "\n[*] Setting up tmpfs for '/tmp'..."
