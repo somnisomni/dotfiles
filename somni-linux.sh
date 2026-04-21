@@ -80,7 +80,8 @@ yes | yay -S --needed --answerdiff None --noconfirm --sudoloop --removemake \
       parted smartmontools dosfstools exfatprogs ntfsplus-dkms-git ntfsprogs-plus f2fs-tools bcachefs-tools btrfs-progs lvm2 \
       sbctl zram-generator openssh \
       gzip zstd zip unzip xz tar 7zip \
-      lm_sensors nvme-cli fastfetch
+      lm_sensors nvme-cli fastfetch \
+      kmscon
 
 ### ** Install fonts **
 msg "\n[*] Installing fonts..."
