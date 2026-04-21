@@ -125,6 +125,14 @@ msg "\n[*] Starting ZRAM service..."
 sudo systemctl daemon-reload
 sudo systemctl start systemd-zram-setup@zram0
 
+### ** KMSCON setup **
+msg "\n[*] Copying KMSCON configuration..."
+sudo cp ./kmscon/kmscon.conf /etc/kmscon/kmscon.conf
+
+msg "\n[*] Enabling KMSCON for all TTYs except TTY1..."
+sudo systemctl enable kmsconvt@
+sudo systemctl enable getty@tty1
+
 ### ** Setup tmpfs for '/tmp' **
 msg "\n[*] Setting up tmpfs for '/tmp'..."
 if (sudo mount -av --fake | grep "^/tmp") > /dev/null 2>&1; then
@@ -155,7 +163,7 @@ sudo ln -sf $HOME/.p10k.zsh /root/.p10k.zsh
 
 ### ** Adjust current user's group memberships
 msg "\n[*] Adjusting current user's group memberships..."
-sudo usermod -aG audio,video,network $USER
+sudo usermod -aG wheel $USER
 
 ### ** Setup complete **
 msg "\n[*] Linux system first-time setup is complete! Reboot is recommended."
