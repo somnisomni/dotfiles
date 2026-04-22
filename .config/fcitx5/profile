@@ -4,7 +4,7 @@ Name="Default EN/KO/JA"
 # Layout
 Default Layout=kr-kr104
 # Default Input Method
-DefaultIM=hangul
+DefaultIM=mozc
 
 [Groups/0/Items/0]
 # Name

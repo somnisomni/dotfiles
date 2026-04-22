@@ -13,45 +13,45 @@
 
 - link:
     # Git
-    ~/.gitignore: git/.gitignore
-    ~/.gitconfig: git/.gitconfig
+    ~/.gitignore: .config/git/.gitignore
+    ~/.gitconfig: .config/git/.gitconfig
 
     # ZSH
-    ~/.zshrc: zsh/.zshrc
-    ~/.zprofile: zsh/.zprofile
-    ~/.p10k.zsh: zsh/.powerlevel10k.zsh
+    ~/.zshrc: .config/zsh/.zshrc
+    ~/.zprofile: .config/zsh/.zprofile
+    ~/.p10k.zsh: .config/zsh/.powerlevel10k.zsh
 
     # Aria2
-    ~/.config/aria2/aria2.conf: aria2/aria2.conf
+    ~/.config/aria2/aria2.conf: .config/aria2/aria2.conf
 
     # Kitty
-    ~/.config/kitty/kitty.conf: kitty/kitty.conf
-    ~/.config/kitty/themes/Pnevma.conf: kitty/themes/Pnevma.conf
+    ~/.config/kitty/kitty.conf: .config/kitty/kitty.conf
+    ~/.config/kitty/themes/Pnevma.conf: .config/kitty/themes/Pnevma.conf
 
     # Fcitx 5
-    ~/.config/fcitx5/config: fcitx5/config
-    ~/.config/fcitx5/profile: fcitx5/profile
-    ~/.config/fcitx5/conf/hangul.conf: fcitx5/conf/hangul.conf
-    ~/.config/fcitx5/conf/mozc.conf: fcitx5/conf/mozc.conf
-    ~/.config/fcitx5/conf/waylandim.conf: fcitx5/conf/waylandim.conf
-    ~/.config/fcitx5/conf/classicui.conf: fcitx5/conf/classicui.conf
+    ~/.config/fcitx5/config: .config/fcitx5/config
+    ~/.config/fcitx5/profile: .config/fcitx5/profile
+    ~/.config/fcitx5/conf/hangul.conf: .config/fcitx5/conf/hangul.conf
+    ~/.config/fcitx5/conf/mozc.conf: .config/fcitx5/conf/mozc.conf
+    ~/.config/fcitx5/conf/waylandim.conf: .config/fcitx5/conf/waylandim.conf
+    ~/.config/fcitx5/conf/classicui.conf: .config/fcitx5/conf/classicui.conf
 
     # PipeWire
-    ~/.config/pipewire/pipewire.conf.d/somni.conf: pipewire/somni.conf
+    ~/.config/pipewire/pipewire.conf.d/somni.conf: .config/pipewire/somni.conf
 
     # EasyEffects
-    ~/.local/share/easyeffects/output: easyeffects/output
-    ~/.local/share/easyeffects/autoload: easyeffects/autoload
+    ~/.local/share/easyeffects/output: .config/easyeffects/output
+    ~/.local/share/easyeffects/autoload: .config/easyeffects/autoload
 
     # Niri & Noctalia Shell
-    ~/.config/niri: niri/niri
-    ~/.config/noctalia/settings.json: niri/noctalia/settings.json
-    ~/.config/noctalia/plugins.json: niri/noctalia/plugins.json
-    ~/.config/noctalia/user-templates.toml: niri/noctalia/user-templates.toml
-    ~/.config/noctalia/templates: niri/noctalia/templates
+    ~/.config/niri: .config/niri/niri
+    ~/.config/noctalia/settings.json: .config/niri/noctalia/settings.json
+    ~/.config/noctalia/plugins.json: .config/niri/noctalia/plugins.json
+    ~/.config/noctalia/user-templates.toml: .config/niri/noctalia/user-templates.toml
+    ~/.config/noctalia/templates: .config/niri/noctalia/templates
 
     # Fontconfig
-    ~/.config/fontconfig: fontconfig
+    ~/.config/fontconfig: .config/fontconfig
     
 - shell:
     # Notice about the script
