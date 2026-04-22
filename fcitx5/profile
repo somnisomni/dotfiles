@@ -2,13 +2,13 @@
 # Group Name
 Name="Default EN/KO/JA"
 # Layout
-Default Layout=kr
+Default Layout=kr-kr104
 # Default Input Method
 DefaultIM=hangul
 
 [Groups/0/Items/0]
 # Name
-Name=keyboard-kr
+Name=keyboard-kr-kr104
 # Layout
 Layout=
 

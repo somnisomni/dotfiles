@@ -1,35 +1,30 @@
 [Hotkey]
 # Enumerate when holding modifier of Toggle key
 EnumerateWithTriggerKeys=True
+# 입력기 활성화
+ActivateKeys=
+# 입력기 비활성화
+DeactivateKeys=
+# Temporarily Toggle Input Method
+AltTriggerKeys=
 # 입력기 전환
 EnumerateForwardKeys=
 # 입력기 역순으로 전환
 EnumerateBackwardKeys=
 # 열거하는 동안 첫 번째 입력기 건너뛰기
 EnumerateSkipFirst=False
+# 입력기 그룹 전환
+EnumerateGroupForwardKeys=
+# 입력기 그룹 역순으로 전환
+EnumerateGroupBackwardKeys=
 # 내장된 사전편집 전환
 TogglePreedit=
 # Time limit in milliseconds for triggering modifier key shortcuts
 ModifierOnlyKeyTimeout=250
 
 [Hotkey/TriggerKeys]
-0=Super+space
+0=Control+space
 1=Hangul
-
-[Hotkey/ActivateKeys]
-0=Hangul_Hanja
-
-[Hotkey/DeactivateKeys]
-0=Hangul_Romaja
-
-[Hotkey/AltTriggerKeys]
-0=Shift_L
-
-[Hotkey/EnumerateGroupForwardKeys]
-0=Super+space
-
-[Hotkey/EnumerateGroupBackwardKeys]
-0=Shift+Super+space
 
 [Hotkey/PrevPage]
 0=Up
@@ -78,3 +73,4 @@ AllowInputMethodForPassword=False
 ShowPreeditForPassword=False
 # Interval of saving user data in minutes
 AutoSavePeriod=30
+

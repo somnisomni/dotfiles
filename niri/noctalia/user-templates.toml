@@ -9,3 +9,7 @@ output_path = "~/.config/niri/noctalia-somni.kdl"
 [templates.sysc-greet]
 input_path = "~/.config/noctalia/templates/sysc-greet.toml"
 output_path = "~/.config/sysc-greet/themes/noctalia.toml"
+
+[templates.fcitx5-somni]
+input_path = "~/.config/noctalia/templates/fcitx5-somni.conf"
+output_path = "~/.local/share/fcitx5/themes/somni-noctalia/theme.conf"
