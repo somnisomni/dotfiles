@@ -119,28 +119,33 @@ workspace "dev" {
 binds {
     // #"Niri fundamentals"
     // disabled: Mod+Slash repeat=false hotkey-overlay-title="Show hotkey list overlay" { show-hotkey-overlay; }
-    Mod+Grave repeat=false hotkey-overlay-title="Toggle Overview"                    { toggle-overview; }
-    Print     repeat=false hotkey-overlay-title="Take a screenshot"                  { screenshot; }
-    Mod+Print repeat=false hotkey-overlay-title="Take a screenshot of whole screen"  { screenshot-screen; }
-    Alt+Print repeat=false hotkey-overlay-title="Take a screenshot of active window" { screenshot-window; }
+    Mod+Grave       repeat=false hotkey-overlay-title="Toggle Overview"                    { toggle-overview; }
+    Mod+MouseMiddle repeat=false hotkey-overlay-title="Toggle Overview"                    { toggle-overview; }
+    Print           repeat=false hotkey-overlay-title="Take a screenshot"                  { screenshot; }
+    Mod+Print       repeat=false hotkey-overlay-title="Take a screenshot of whole screen"  { screenshot-screen; }
+    Alt+Print       repeat=false hotkey-overlay-title="Take a screenshot of active window" { screenshot-window; }
 
     // #"Window/column manipulations"
-    Mod+Q            repeat=false hotkey-overlay-title="Close focused window"                 { close-window; }
-    Alt+F4           repeat=false hotkey-overlay-title="Close focused window"                 { close-window; }
-    Mod+F            repeat=false hotkey-overlay-title="Maximize focused column"              { maximize-column; }
-    Mod+Ctrl+F       repeat=false hotkey-overlay-title="Maximize focused window edge-to-edge" { maximize-window-to-edges; }
-    Mod+V            repeat=false hotkey-overlay-title="Toggle focused window floating"       { toggle-window-floating; }
-    Mod+C            repeat=false hotkey-overlay-title="Center focused column"                { center-column; }
-    Mod+Left         cooldown-ms=100 hotkey-overlay-title="Focus left column"                 { focus-column-left; }
-    Mod+Right        cooldown-ms=100 hotkey-overlay-title="Focus right column"                { focus-column-right; }
-    Mod+Ctrl+Left    cooldown-ms=500 hotkey-overlay-title="Move column to left"               { move-column-left; }
-    Mod+Ctrl+Right   cooldown-ms=500 hotkey-overlay-title="Move column to right"              { move-column-right; }
-    Mod+Home         repeat=false hotkey-overlay-title="Focus first column"                   { focus-column-first; }
-    Mod+End          repeat=false hotkey-overlay-title="Focus last column"                    { focus-column-last; }
-    Mod+Ctrl+Home    repeat=false hotkey-overlay-title="Move column to first"                 { move-column-to-first; }
-    Mod+Ctrl+End     repeat=false hotkey-overlay-title="Move column to last"                  { move-column-to-last; }
-    Mod+BracketLeft  cooldown-ms=100 hotkey-overlay-title="Cycle column width back"           { switch-preset-column-width-back; }
-    Mod+BracketRight cooldown-ms=100 hotkey-overlay-title="Cycle column width forth"          { switch-preset-column-width; }
+    Mod+Q                    repeat=false hotkey-overlay-title="Close focused window"                 { close-window; }
+    Alt+F4                   repeat=false hotkey-overlay-title="Close focused window"                 { close-window; }
+    Mod+F                    repeat=false hotkey-overlay-title="Maximize focused column"              { maximize-column; }
+    Mod+Ctrl+F               repeat=false hotkey-overlay-title="Maximize focused window edge-to-edge" { maximize-window-to-edges; }
+    Mod+V                    repeat=false hotkey-overlay-title="Toggle focused window floating"       { toggle-window-floating; }
+    Mod+C                    repeat=false hotkey-overlay-title="Center focused column"                { center-column; }
+    Mod+Left                 cooldown-ms=100 hotkey-overlay-title="Focus left column"                 { focus-column-left; }
+    Mod+WheelScrollUp        cooldown-ms=100 hotkey-overlay-title="Focus left column"                 { focus-column-left; }
+    Mod+Right                cooldown-ms=100 hotkey-overlay-title="Focus right column"                { focus-column-right; }
+    Mod+WheelScrollDown      cooldown-ms=100 hotkey-overlay-title="Focus right column"                { focus-column-right; }
+    Mod+Ctrl+Left            cooldown-ms=500 hotkey-overlay-title="Move column to left"               { move-column-left; }
+    Mod+Ctrl+WheelScrollUp   cooldown-ms=500 hotkey-overlay-title="Move column to left"               { move-column-left; }
+    Mod+Ctrl+Right           cooldown-ms=500 hotkey-overlay-title="Move column to right"              { move-column-right; }
+    Mod+Ctrl+WheelScrollDown cooldown-ms=500 hotkey-overlay-title="Move column to right"              { move-column-right; }
+    Mod+Home                 repeat=false hotkey-overlay-title="Focus first column"                   { focus-column-first; }
+    Mod+End                  repeat=false hotkey-overlay-title="Focus last column"                    { focus-column-last; }
+    Mod+Ctrl+Home            repeat=false hotkey-overlay-title="Move column to first"                 { move-column-to-first; }
+    Mod+Ctrl+End             repeat=false hotkey-overlay-title="Move column to last"                  { move-column-to-last; }
+    Mod+BracketLeft          cooldown-ms=100 hotkey-overlay-title="Cycle column width back"           { switch-preset-column-width-back; }
+    Mod+BracketRight         cooldown-ms=100 hotkey-overlay-title="Cycle column width forth"          { switch-preset-column-width; }
 
     // #"Workspace manipulations"
     Mod+Up         cooldown-ms=100 hotkey-overlay-title="Focus previous workspace"          { focus-workspace-up; }
