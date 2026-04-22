@@ -4,6 +4,7 @@
     link:
       create: true
       relink: true
+      force: true
 
 - clean:
     ~/:
@@ -33,6 +34,7 @@
     ~/.config/fcitx5/conf/hangul.conf: fcitx5/conf/hangul.conf
     ~/.config/fcitx5/conf/mozc.conf: fcitx5/conf/mozc.conf
     ~/.config/fcitx5/conf/waylandim.conf: fcitx5/conf/waylandim.conf
+    ~/.config/fcitx5/conf/classicui.conf: fcitx5/conf/classicui.conf
 
     # PipeWire
     ~/.config/pipewire/pipewire.conf.d/somni.conf: pipewire/somni.conf
