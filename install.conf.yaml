@@ -13,45 +13,45 @@
 
 - link:
     # Git
-    ~/.gitignore: .config/git/.gitignore
-    ~/.gitconfig: .config/git/.gitconfig
+    ~/.gitignore: user/git/.gitignore
+    ~/.gitconfig: user/git/.gitconfig
 
     # ZSH
-    ~/.zshrc: .config/zsh/.zshrc
-    ~/.zprofile: .config/zsh/.zprofile
-    ~/.p10k.zsh: .config/zsh/.powerlevel10k.zsh
+    ~/.zshrc: user/zsh/.zshrc
+    ~/.zprofile: user/zsh/.zprofile
+    ~/.p10k.zsh: user/zsh/.powerlevel10k.zsh
 
     # Aria2
-    ~/.config/aria2/aria2.conf: .config/aria2/aria2.conf
+    ~/.config/aria2/aria2.conf: user/aria2/aria2.conf
 
     # Kitty
-    ~/.config/kitty/kitty.conf: .config/kitty/kitty.conf
-    ~/.config/kitty/themes/Pnevma.conf: .config/kitty/themes/Pnevma.conf
+    ~/.config/kitty/kitty.conf: user/kitty/kitty.conf
+    ~/.config/kitty/themes/Pnevma.conf: user/kitty/themes/Pnevma.conf
 
     # Fcitx 5
-    ~/.config/fcitx5/config: .config/fcitx5/config
-    ~/.config/fcitx5/profile: .config/fcitx5/profile
-    ~/.config/fcitx5/conf/hangul.conf: .config/fcitx5/conf/hangul.conf
-    ~/.config/fcitx5/conf/mozc.conf: .config/fcitx5/conf/mozc.conf
-    ~/.config/fcitx5/conf/waylandim.conf: .config/fcitx5/conf/waylandim.conf
-    ~/.config/fcitx5/conf/classicui.conf: .config/fcitx5/conf/classicui.conf
+    ~/.config/fcitx5/config: user/fcitx5/config
+    ~/.config/fcitx5/profile: user/fcitx5/profile
+    ~/.config/fcitx5/conf/hangul.conf: user/fcitx5/conf/hangul.conf
+    ~/.config/fcitx5/conf/mozc.conf: user/fcitx5/conf/mozc.conf
+    ~/.config/fcitx5/conf/waylandim.conf: user/fcitx5/conf/waylandim.conf
+    ~/.config/fcitx5/conf/classicui.conf: user/fcitx5/conf/classicui.conf
 
     # PipeWire
-    ~/.config/pipewire/pipewire.conf.d/somni.conf: .config/pipewire/somni.conf
+    ~/.config/pipewire/pipewire.conf.d/somni.conf: user/pipewire/somni.conf
 
     # EasyEffects
-    ~/.local/share/easyeffects/output: .config/easyeffects/output
-    ~/.local/share/easyeffects/autoload: .config/easyeffects/autoload
+    ~/.local/share/easyeffects/output: user/easyeffects/output
+    ~/.local/share/easyeffects/autoload: user/easyeffects/autoload
 
     # Niri & Noctalia Shell
-    ~/.config/niri: .config/niri/niri
-    ~/.config/noctalia/settings.json: .config/niri/noctalia/settings.json
-    ~/.config/noctalia/plugins.json: .config/niri/noctalia/plugins.json
-    ~/.config/noctalia/user-templates.toml: .config/niri/noctalia/user-templates.toml
-    ~/.config/noctalia/templates: .config/niri/noctalia/templates
+    ~/.config/niri: user/niri/niri
+    ~/.config/noctalia/settings.json: user/niri/noctalia/settings.json
+    ~/.config/noctalia/plugins.json: user/niri/noctalia/plugins.json
+    ~/.config/noctalia/user-templates.toml: user/niri/noctalia/user-templates.toml
+    ~/.config/noctalia/templates: user/niri/noctalia/templates
 
     # Fontconfig
-    ~/.config/fontconfig: .config/fontconfig
+    ~/.config/fontconfig: user/fontconfig
     
 - shell:
     # Notice about the script
