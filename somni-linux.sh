@@ -4,6 +4,8 @@ set -eu
 ####### somni.dotfiles.linux #######
 ## Linux system  first-time setup ##
 
+DOTFILES_CONFIG_ROOT=./.config
+
 function msg() {
   echo -e "$1"
 }
@@ -120,7 +122,7 @@ sudo systemctl enable --now pkgfile-update.timer
 
 ### ** ZRAM setup **
 msg "\n[*] Copying zram-generator configuration..."
-sudo cp ./zram/zram-generator.conf /etc/systemd/zram-generator.conf
+sudo cp $DOTFILES_CONFIG_ROOT/zram/zram-generator.conf /etc/systemd/zram-generator.conf
 
 msg "\n[*] Starting ZRAM service..."
 sudo systemctl daemon-reload
@@ -128,7 +130,7 @@ sudo systemctl start systemd-zram-setup@zram0
 
 ### ** KMSCON setup **
 msg "\n[*] Copying KMSCON configuration..."
-sudo cp ./kmscon/kmscon.conf /etc/kmscon/kmscon.conf
+sudo cp $DOTFILES_CONFIG_ROOT/kmscon/kmscon.conf /etc/kmscon/kmscon.conf
 
 msg "\n[*] Enabling KMSCON for all TTYs except TTY1/TTY6..."
 sudo systemctl enable kmsconvt@
