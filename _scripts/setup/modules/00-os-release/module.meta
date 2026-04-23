@@ -1,0 +1,3 @@
+MODULE_NAME="Set OS variant to 'os-release'"
+MODULE_DESC="Add or update 'VARIANT' value in '/etc/os-release' with specified value in the module script. Let's pollute it ;)"
+MODULE_DEFAULT="on"

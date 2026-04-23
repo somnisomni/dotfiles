@@ -1,0 +1,3 @@
+MODULE_NAME="Do a full system upgrade"
+MODULE_DESC="Do a full system upgrade (-Syu) using pacman"
+MODULE_DEFAULT="on"

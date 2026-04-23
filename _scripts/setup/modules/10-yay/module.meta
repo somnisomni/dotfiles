@@ -1,0 +1,3 @@
+MODULE_NAME="Install and setup 'yay'"
+MODULE_DESC="Install 'yay' pacman/AUR helper and setup with basic configuration"
+MODULE_DEFAULT="on"
