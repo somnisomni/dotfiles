@@ -1,0 +1,3 @@
+MODULE_NAME="Cleanup package caches"
+MODULE_DESC="Free some spaces occupied by package caches on the storage (pacman|yay -Sc)"
+MODULE_DEFAULT="on"
