@@ -1,5 +1,5 @@
-[submodule "dotbot"]
-	path = dotbot
+[submodule "_dotbot"]
+	path = _dotbot
 	url = https://github.com/anishathalye/dotbot
 	branch = master
 	ignore = dirty
