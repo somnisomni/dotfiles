@@ -12,6 +12,12 @@
       recursive: true
 
 - link:
+    # Systemd environment.d
+    ~/.config/environment.d: user/environment.d
+
+    # XDG
+    ~/.config/user-dirs.dirs: user/user-dirs.dirs
+
     # Git
     ~/.gitignore: user/git/.gitignore
     ~/.gitconfig: user/git/.gitconfig
@@ -52,7 +58,7 @@
 
     # Fontconfig
     ~/.config/fontconfig: user/fontconfig
-    
+
 - shell:
     # Notice about the script
     - description: "Notice"
