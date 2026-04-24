@@ -82,3 +82,13 @@ alias l='ls -ACF'
 if [[ -f ~/.niri.zsh ]]; then
   source ~/.niri.zsh
 fi
+
+### ** Fastfetch on shell startup **
+# Execute `fastfetch` if installed
+if command -v fastfetch &> /dev/null; then
+  # Disable "Instant Prompt" warning in this case
+  typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+  echo                    # padding
+  fastfetch --pipe false  # `--pipe false` forces colored output
+fi
