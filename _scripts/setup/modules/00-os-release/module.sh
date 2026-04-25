@@ -25,11 +25,11 @@ function check_before_run() {
 function run() {
     if (grep -iE "^VARIANT=" /etc/os-release >/dev/null 2>&1); then
         if ! (grep -iE "^VARIANT=.*${TARGET_VARIANT}.*" /etc/os-release >/dev/null 2>&1); then
-            echo "Update existing VARIANT value by appending target value..."
+            echo "Updating existing VARIANT value by appending target value..."
             sudo sed -i -E 's|^(VARIANT=)\"?([^\"]*)\"?$|\1\"\2 ('"${TARGET_VARIANT}"')\"|' /etc/os-release
         fi
     else
-        echo "Add VARIANT property with target value..."
+        echo "Adding VARIANT property with target value..."
         echo "VARIANT=\"$TARGET_VARIANT\"" | sudo tee -a /etc/os-release > /dev/null
     fi
 

@@ -16,27 +16,27 @@ function check_before_run() {
 }
 
 function run() {
-    echo "Install essential packages and clone the repository..."
+    echo "Installing essential packages and clone the repository..."
     yes | sudo pacman -S --needed git base-devel
     git clone --depth 1 --single-branch https://aur.archlinux.org/yay-bin.git $HOME/.cache/yay-bin
 
-    echo "Build and install 'yay-bin' package..."
+    echo "Building and installing 'yay-bin' package..."
     pushd $HOME/.cache/yay-bin
     makepkg -si
 
-    echo "Cleanup 'yay-bin' repository..."
+    echo "Cleaning up 'yay-bin' repository..."
     popd
     rm -rf yay-bin
 
-    echo "Check for 'yay' command..."
+    echo "Checking for 'yay' command..."
     if (! command -v yay &> /dev/null); then
         return 1
     fi
 
-    echo "Configure yay..."
+    echo "Configuring yay..."
     yay -S --save --removemake --devel --editmenu --editor nano
 
-    echo "Make sure 'yay-bin' package have marked as installed on the system..."
+    echo "Making sure 'yay-bin' package have marked as installed on the system..."
     yes | yay -S yay-bin
 
     return 0

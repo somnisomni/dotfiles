@@ -16,24 +16,40 @@ function check_before_run() {
         return 0
     fi
 
+    if ($PACKAGE_MANAGER -Q --quiet kmscon &> /dev/null); then
+        # If 'kmscon' is already installed, skip this module
+        return 2
+    fi
+
     # Otherwise it's not good to go, well, maybe
     return 1
 }
 
 function run() {
-    echo "Doing a full system upgrade using '$PACKAGE_MANAGER'..."
+    echo "Installing KMSCON..."
     if [[ $PACKAGE_MANAGER = "pacman" ]]; then
-        yes | sudo $PACKAGE_MANAGER -Syyu --noconfirm
+        yes | sudo $PACKAGE_MANAGER -S --needed --noconfirm kmscon
     else
-        yes | $PACKAGE_MANAGER -Syyu --noconfirm
+        yes | $PACKAGE_MANAGER -S --needed --noconfirm kmscon
     fi
+
+    echo "Enabling KMSCON for all TTYs except TTY1 and TTY6..."
+    sudo systemctl enable kmsconvt@
+    sudo systemctl disable kmsconvt@tty1
+    sudo systemctl disable kmsconvt@tty6
+    sudo systemctl enable getty@tty1
+    sudo systemctl enable getty@tty6
 
     return 0
 }
 
 function check_after_run() {
-    # Nothing to check, just pass 0
-    return 0
+    # Check for 'kmscon' package is installed
+    if ($PACKAGE_MANAGER -Q --quiet kmscon &> /dev/null); then
+        return 0
+    fi
+
+    return 1
 }
 
 ##### MODULE PROCEDURE EXECUTION #####

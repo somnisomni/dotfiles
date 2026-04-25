@@ -1,0 +1,3 @@
+MODULE_NAME="Install and config KMSCON"
+MODULE_DESC="Install KMSCON and copy dotfiles' config"
+MODULE_DEFAULT="on"
