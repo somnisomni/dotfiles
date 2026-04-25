@@ -18,7 +18,7 @@ function check_before_run() {
 function run() {
     echo "Install essential packages and clone the repository..."
     yes | sudo pacman -S --needed git base-devel
-    git clone https://aur.archlinux.org/yay-bin.git $HOME/.cache/yay-bin
+    git clone --depth 1 --single-branch https://aur.archlinux.org/yay-bin.git $HOME/.cache/yay-bin
 
     echo "Build and install 'yay-bin' package..."
     pushd $HOME/.cache/yay-bin
