@@ -11,6 +11,8 @@
     ~/.config:
       recursive: true
 
+# TODO: use sudo plugin, for system-wide configuration files
+
 - link:
     # Systemd environment.d
     ~/.config/environment.d: user/environment.d
