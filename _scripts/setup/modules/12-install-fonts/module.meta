@@ -1,0 +1,3 @@
+MODULE_NAME="Install fonts"
+MODULE_DESC="Install font packages specified in the module script"
+MODULE_DEFAULT="on"

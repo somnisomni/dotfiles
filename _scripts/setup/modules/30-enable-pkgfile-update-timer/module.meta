@@ -1,0 +1,3 @@
+MODULE_NAME="Enable PKGFILE update timer"
+MODULE_DESC="Enable automatic PKGFILE update timer provided by systemd"
+MODULE_DEFAULT="on"
