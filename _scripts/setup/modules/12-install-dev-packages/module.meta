@@ -1,0 +1,3 @@
+MODULE_NAME="Install development packages"
+MODULE_DESC="Install development packages specified in the module script"
+MODULE_DEFAULT="on"

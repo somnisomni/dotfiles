@@ -1,0 +1,3 @@
+MODULE_NAME="Install core packages"
+MODULE_DESC="Install core/essential system packages specified in the module script"
+MODULE_DEFAULT="on"
