@@ -38,6 +38,9 @@ if [[ ! -d "$BASEDIR/$MODULES_DIR" ]]; then
     exit 1
 fi
 
+# Bogus sudo, to prevent password prompt interrupting the setup flow
+sudo -v
+
 #TODO
 result=()
 build_dialog_module_items result
