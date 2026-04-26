@@ -1,0 +1,3 @@
+MODULE_NAME="Set up tmpfs"
+MODULE_DESC="Add tmpfs mountpoints to fstab for better responsiveness"
+MODULE_DEFAULT="on"
