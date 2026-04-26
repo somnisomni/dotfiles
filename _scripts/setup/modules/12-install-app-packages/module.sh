@@ -28,6 +28,9 @@ PACKAGES=(
 
     # Spotify
     "spotify"
+
+    # KDE Connect
+    "kdeconnect"
 )
 
 ##### MODULE PROCEDURE DEFINITIONS #####
