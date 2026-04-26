@@ -27,7 +27,6 @@
 
     # ZSH
     ~/.zshrc: user/zsh/.zshrc
-    ~/.zprofile: user/zsh/.zprofile
     ~/.p10k.zsh: user/zsh/.powerlevel10k.zsh
 
     # Aria2
