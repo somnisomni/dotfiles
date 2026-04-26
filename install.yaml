@@ -20,6 +20,7 @@
 
     # XDG
     ~/.config/user-dirs.dirs: user/user-dirs.dirs
+    ~/.config/xdg-desktop-portal/portals.conf: user/xdg-desktop-portal/portals.conf
 
     # Git
     ~/.gitignore: user/git/.gitignore
