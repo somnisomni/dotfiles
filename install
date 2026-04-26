@@ -1,17 +1,31 @@
 #!/usr/bin/env bash
+set -eu
 
-# Copied from 'dotbot/tools/git-submodule/install' and modified to fit the source tree
+####### somni.dotfiles #######
+## Dotbot  bootstrap script ##
 
-set -e
+BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 CONFIG="install.yaml"
-DOTBOT_DIR="_dotbot"
+CONFIG_SUDO="install-sudo.yaml"
 
+DOTBOT_DIR="_dotbot"
 DOTBOT_BIN="bin/dotbot"
-BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 cd "${BASEDIR}"
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
-git submodule update --init --recursive "${DOTBOT_DIR}"
+git submodule update --init --recursive "${BASEDIR}"
 
-"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
+if [[ -r "${CONFIG}" ]]; then
+    echo "[*] Running Dotbot for user-specific configuration (${CONFIG})..."
+    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
+else
+    echo "[*] No user-specific configuration file for Dotbot found (${CONFIG}), skipping..."
+fi
+
+if [[ -r "${CONFIG_SUDO}" ]]; then
+    echo "[*] Running Dotbot for system-wide configuration (${CONFIG_SUDO})..."
+    sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG_SUDO}" "${@}"
+else
+    echo "[*] No system-wide configuration file for Dotbot found (${CONFIG_SUDO}), skipping..."
+fi

@@ -1,0 +1,21 @@
+#################### somni.dotfiles ####################
+## Dotbot config  for system-wide configuration files ##
+
+# See https://github.com/anishathalye/dotbot?tab=readme-ov-file#configuration for documentation
+
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true
+
+- clean:
+    /etc:
+      recursive: true
+
+- link:
+    # KMSCON
+    /etc/kmscon/kmscon.conf: system/kmscon/kmscon.conf
+
+    # ZRAM
+    /etc/systemd/zram-generator.conf: system/zram/zram-generator.conf

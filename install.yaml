@@ -1,3 +1,6 @@
+##################### somni.dotfiles #####################
+## Dotbot config  for user-specific configuration files ##
+
 # See https://github.com/anishathalye/dotbot?tab=readme-ov-file#configuration for documentation
 
 - defaults:
@@ -10,8 +13,6 @@
     ~/:
     ~/.config:
       recursive: true
-
-# TODO: use sudo plugin, for system-wide configuration files
 
 - link:
     # Systemd environment.d
@@ -60,11 +61,3 @@
 
     # Fontconfig
     ~/.config/fontconfig: user/fontconfig
-
-- shell:
-    # Notice about the script
-    - description: "Notice"
-      command: "echo -e '\n\n[!] For the first-time setup, please run one of the following scripts based on the OS:\n
-                 • Linux (Arch Linux based): ./somni-linux.sh\n
-                 • macOS: ./somni-macos.sh (not ready yet)\n\n'"
-      stdout: true
