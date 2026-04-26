@@ -4,6 +4,7 @@ set -eu
 ####### somni.dotfiles #######
 ## Dotbot  bootstrap script ##
 
+# ** Constants **
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 CONFIG="install.yaml"
@@ -12,10 +13,14 @@ CONFIG_SUDO="install-sudo.yaml"
 DOTBOT_DIR="_dotbot"
 DOTBOT_BIN="bin/dotbot"
 
+SETUP_SCRIPT="_scripts/setup/setup.sh"
+
+# ** Make sure the submodules are initialized **
 cd "${BASEDIR}"
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${BASEDIR}"
 
+# ** Run Dotbot for user configuration **
 if [[ -r "${CONFIG}" ]]; then
     echo "[*] Running Dotbot for user-specific configuration (${CONFIG})..."
     "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
@@ -23,9 +28,28 @@ else
     echo "[*] No user-specific configuration file for Dotbot found (${CONFIG}), skipping..."
 fi
 
+# ** Run Dotbot for system-wide configuration with sudo **
 if [[ -r "${CONFIG_SUDO}" ]]; then
     echo "[*] Running Dotbot for system-wide configuration (${CONFIG_SUDO})..."
     sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG_SUDO}" "${@}"
 else
     echo "[*] No system-wide configuration file for Dotbot found (${CONFIG_SUDO}), skipping..."
+fi
+
+# ** Prompt for setup script execution **
+if [[ -x "${BASEDIR}/${SETUP_SCRIPT}" ]]; then
+    echo
+    read -r -n 1 -p "[?] Continue to execute first-time setup script? (${SETUP_SCRIPT}) [y/N] " choice
+    case $choice in
+        [yY]* )
+            echo
+            echo "[*] Executing first-time setup script..."
+            "${BASEDIR}/${SETUP_SCRIPT}"
+            ;;
+        * )
+            echo
+            echo "[*] Installation done without running first-time setup script."
+            exit 0
+            ;;
+    esac
 fi
