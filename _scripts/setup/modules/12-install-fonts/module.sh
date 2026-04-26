@@ -68,6 +68,9 @@ function run() {
     yes | yay -S --needed --answerdiff None --noconfirm --sudoloop --removemake \
           "${FONTS_SYMBOLS[@]}"
 
+    echo "Rebuilding font caches..."
+    fc-cache -fv
+
     return 0
 }
 
