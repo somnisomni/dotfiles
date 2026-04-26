@@ -63,5 +63,8 @@
     ~/.config/gtk-3.0/settings.ini: user/gtk-3.0/settings.ini
     ~/.config/gtk-4.0/settings.ini: user/gtk-4.0/settings.ini
 
+    # QT
+    ~/.config/qt6ct/qt6ct.conf: user/qt6ct/qt6ct.conf
+
     # Fontconfig
     ~/.config/fontconfig: user/fontconfig
