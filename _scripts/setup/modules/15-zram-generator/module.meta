@@ -1,0 +1,3 @@
+MODULE_NAME="Install and config zram-generator"
+MODULE_DESC="Install zram-generator and enable it"
+MODULE_DEFAULT="on"

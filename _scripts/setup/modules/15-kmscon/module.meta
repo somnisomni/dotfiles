@@ -1,3 +1,3 @@
 MODULE_NAME="Install and config KMSCON"
-MODULE_DESC="Install KMSCON and copy dotfiles' config"
+MODULE_DESC="Install KMSCON and enable it for all TTYs except TTY1 and TTY6"
 MODULE_DEFAULT="on"
