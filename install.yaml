@@ -59,5 +59,9 @@
     ~/.config/noctalia/user-templates.toml: user/niri/noctalia/user-templates.toml
     ~/.config/noctalia/templates: user/niri/noctalia/templates
 
+    # GTK
+    ~/.config/gtk-3.0/settings.ini: user/gtk-3.0/settings.ini
+    ~/.config/gtk-4.0/settings.ini: user/gtk-4.0/settings.ini
+
     # Fontconfig
     ~/.config/fontconfig: user/fontconfig
