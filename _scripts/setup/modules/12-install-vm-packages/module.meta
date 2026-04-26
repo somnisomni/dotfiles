@@ -1,0 +1,3 @@
+MODULE_NAME="Install VM management packages"
+MODULE_DESC="Install packages for managing virtual machines (libvirt/QEMU)"
+MODULE_DEFAULT="on"
