@@ -8,7 +8,10 @@ KEYBOARD_OPTIONS="korean"
 
 ##### MODULE PROCEDURE DEFINITIONS #####
 function check_before_run() {
-    # Nothing to check
+    if ! (command -v localectl &> /dev/null); then
+        return 1
+    fi
+
     return 0
 }
 
