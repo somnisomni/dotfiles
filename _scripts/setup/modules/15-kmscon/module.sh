@@ -34,6 +34,7 @@ function run() {
     fi
 
     echo "Enabling KMSCON for all TTYs except TTY1 and TTY6..."
+    sudo systemctl disable getty@
     sudo systemctl enable kmsconvt@
     sudo systemctl disable kmsconvt@tty1
     sudo systemctl disable kmsconvt@tty6
