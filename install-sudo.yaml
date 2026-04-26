@@ -19,3 +19,8 @@
 
     # ZRAM
     /etc/systemd/zram-generator.conf: system/zram/zram-generator.conf
+
+    # GTK/QT theme configs (for elevated applications)
+    /root/.config/gtk-3.0/settings.ini: user/gtk-3.0/settings.ini
+    /root/.config/gtk-4.0/settings.ini: user/gtk-4.0/settings.ini
+    /root/.config/qt6ct/qt6ct.conf: user/qt6ct/qt6ct.conf
