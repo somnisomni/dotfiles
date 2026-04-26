@@ -1,0 +1,3 @@
+MODULE_NAME="Change user's shell to zsh"
+MODULE_DESC="Change user's shell to zsh and link zsh configuration to root home"
+MODULE_DEFAULT="on"
