@@ -1,0 +1,3 @@
+MODULE_NAME="Install 3rd-party GUI app/service packages"
+MODULE_DESC="Install personal selection of 3rd-party GUI application or service packages"
+MODULE_DEFAULT="on"
