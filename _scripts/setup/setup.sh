@@ -49,7 +49,7 @@ trap 'rm -f "$dialog_module_selected_tmp"' EXIT
 
 show_dialog --no-tags \
             --title "First-Time Setup — Select Modules" \
-            --checklist "Select:" 25 100 15 "${dialog_module_items[@]}" \
+            --checklist "Current user: $(whoami)\n\nSelect modules to execute:" 25 100 15 "${dialog_module_items[@]}" \
             2> "$dialog_module_selected_tmp"
 dialog_exit=$?
 
