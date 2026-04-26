@@ -5,6 +5,7 @@ set -u
 PACKAGES=(
     # CLI text editor
     "nano"
+    "nano-syntax-highlighting"
 
     # Network tools
     "wget"
@@ -25,14 +26,18 @@ PACKAGES=(
     "bcachefs-dkms"
     "bcachefs-tools"
     "btrfs-progs"
+    "compsize"
     "lvm2"
 
     # Hardware tools
     "smartmontools"
     "lm_sensors"
     "nvme-cli"
+    "hdparm"
+    "htop"
 
     # Extra system tools
+    "dkms"
     "sbctl"
     "fastfetch"
 

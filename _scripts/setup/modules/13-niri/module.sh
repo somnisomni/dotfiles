@@ -50,10 +50,11 @@ PACKAGES=(
 
     # Clipboard manager
     "cliphist"
+    "wl-clipboard"
 
     # Media player
     "vlc"
-    "amarok"
+    "elisa"
     "nomacs"
 
     # Media control
@@ -66,6 +67,12 @@ PACKAGES=(
 
     # Terminal emulator
     "kitty"
+    "kitty-shell-integration"
+    "kitty-terminfo"
+
+    # System management
+    "gparted"
+    "mission-center"
 )
 
 ##### MODULE PROCEDURE DEFINITIONS #####
