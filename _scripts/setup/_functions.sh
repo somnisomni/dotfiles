@@ -3,6 +3,30 @@
 MODULE_SCRIPT_FILE_NAME="module.sh"
 MODULE_META_FILE_NAME="module.meta"
 
+function show_dialog() {
+    local params=("$@")
+
+    dialog --clear \
+       --backtitle "somni.dotfiles" \
+       --erase-on-exit \
+       "${params[@]}"
+
+    return $?
+}
+
+function module_result_to_string() {
+    local -n output=$1
+    local module_result=$2
+
+    case $module_result in
+        0) output="Success" ;;
+        1) output="Failed" ;;
+        2) output="Skipped" ;;
+        *) output="Unknown" ;;
+    esac
+}
+
+
 function get_available_modules_dirname() {
     local -n target_array=$1
     local modules=()
@@ -35,7 +59,7 @@ function build_dialog_module_items() {
 
         dialog_items+=("$dir" "$MODULE_NAME" "$MODULE_DEFAULT")
     done
-    
+
     target_array=("${dialog_items[@]}")
 }
 
@@ -59,6 +83,13 @@ function execute_module_by_id() {
         return 1
     fi
 
+    echo -e "\n[*] Executing module '$module_id'...\n"
     bash $module_script
-    return $?
+    result=$?
+
+    result_str=""
+    module_result_to_string result_str $result
+    echo -e "\n[*] Module '$module_id' execution result: $result_str\n"
+
+    return $result
 }

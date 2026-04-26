@@ -49,6 +49,7 @@ if [[ -x "${BASEDIR}/${SETUP_SCRIPT}" ]]; then
         * )
             echo
             echo "[*] Installation done without running first-time setup script."
+            echo "[*] You can run the setup script later by executing: ${BASEDIR}/${SETUP_SCRIPT}"
             exit 0
             ;;
     esac

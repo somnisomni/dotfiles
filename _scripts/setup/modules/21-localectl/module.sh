@@ -17,7 +17,7 @@ function check_before_run() {
 
 function run() {
     echo "Setting up X11 keyboard keymap: $KEYBOARD_MODEL $KEYBOARD_LAYOUT $KEYBOARD_VARIANT $KEYBOARD_OPTIONS"
-    localectl set-x11-keymap "$KEYBOARD_LAYOUT" "$KEYBOARD_MODEL" "$KEYBOARD_VARIANT" "$KEYBOARD_OPTIONS"
+    sudo localectl set-x11-keymap "$KEYBOARD_LAYOUT" "$KEYBOARD_MODEL" "$KEYBOARD_VARIANT" "$KEYBOARD_OPTIONS"
 
     return 0
 }
