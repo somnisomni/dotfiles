@@ -24,3 +24,9 @@
     /root/.config/gtk-3.0/settings.ini: user/gtk-3.0/settings.ini
     /root/.config/gtk-4.0/settings.ini: user/gtk-4.0/settings.ini
     /root/.config/qt6ct/qt6ct.conf: user/qt6ct/qt6ct.conf
+
+- shell:
+    # Install libvirt QEMU hooks
+    #   VM-specific hook scripts (system/libvirt/hooks/qemu.d) are meant to be manually configured by the user, by the purpose.
+    - command: "cp system/libvirt/hooks/qemu /etc/libvirt/hooks/qemu && chmod +x /etc/libvirt/hooks/qemu && chown root:root /etc/libvirt/hooks/qemu"
+      description: "Copy libvirt QEMU hooks"
