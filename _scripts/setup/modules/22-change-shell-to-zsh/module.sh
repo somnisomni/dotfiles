@@ -9,18 +9,21 @@ function check_before_run() {
 
 function run() {
     echo "Updating user's shell to zsh..."
-    sudo chsh -s "$(which zsh)" "$USER"
+    sudo chsh -s "$(which zsh)" $USER
 
-    echo "Link zsh configuration files to the root user's home directory..."
+    echo "Linking zsh configuration files to the root user's home directory..."
     sudo ln -sf $HOME/.zshrc /root/.zshrc
     sudo ln -sf $HOME/.p10k.zsh /root/.p10k.zsh
+
+    echo "Adding current user to the 'wheel' group..."
+    sudo usermod -aG wheel $USER
 
     return 0
 }
 
 function check_after_run() {
     # Check if the current user's shell is set to zsh
-    CURRENT_SHELL=$(getent passwd "$USER" | cut -d: -f7)
+    CURRENT_SHELL=$(getent passwd $USER | cut -d: -f7)
 
     if [[ "$CURRENT_SHELL" != "$(which zsh)" ]]; then
         return 1
