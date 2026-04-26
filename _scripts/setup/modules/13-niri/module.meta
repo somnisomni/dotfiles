@@ -1,0 +1,3 @@
+MODULE_NAME="Install Niri and fundamentals"
+MODULE_DESC="Install Niri window manager and fundamental packages (shell, themeing, GUI apps, etc)"
+MODULE_DEFAULT="on"

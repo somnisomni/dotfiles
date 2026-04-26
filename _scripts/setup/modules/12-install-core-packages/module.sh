@@ -45,6 +45,10 @@ PACKAGES=(
     "tar"
     "7zip"
 
+    # Media tools
+    "ffmpeg"
+    "imagemagick"
+
     # ZSH shell
     "zsh"
     "oh-my-zsh-git"
