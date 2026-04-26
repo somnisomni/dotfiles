@@ -83,7 +83,7 @@ done
 # Done
 show_dialog --title "First-Time Setup — Completed" \
             --extra-button --extra-label "Open Log File" \
-            --msgbox "All done! Please check the 'output.log' file for details of module execution." 5 100
+            --msgbox "All done! Please check the 'output.log' file for details of module execution.\n\nReboot is strongly recommended." 8 100
 if [[ $? -eq 3 ]]; then
     OPEN="xdg-open"
     command -v $OPEN &> /dev/null || OPEN="$PAGER"
