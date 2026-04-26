@@ -1,0 +1,3 @@
+MODULE_NAME="Set up localectl"
+MODULE_DESC="Set up system-wide locale configuration via localectl"
+MODULE_DEFAULT="on"
