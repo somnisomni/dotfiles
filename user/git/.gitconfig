@@ -35,6 +35,9 @@
   ui = auto
 
 ### ** GitHub authentication using GitHub CLI **
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
+
 [credential "https://github.com"]
 	helper =
 	helper = !/usr/bin/gh auth git-credential
