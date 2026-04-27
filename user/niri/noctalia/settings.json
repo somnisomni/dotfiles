@@ -164,7 +164,7 @@
             ],
             "right": [
                 {
-                    "compactMode": true,
+                    "compactMode": false,
                     "diskPath": "/",
                     "iconColor": "none",
                     "id": "SystemMonitor",
@@ -177,13 +177,13 @@
                     "showDiskUsageAsPercent": false,
                     "showGpuTemp": false,
                     "showLoadAverage": false,
-                    "showMemoryAsPercent": false,
+                    "showMemoryAsPercent": true,
                     "showMemoryUsage": true,
-                    "showNetworkStats": false,
+                    "showNetworkStats": true,
                     "showSwapUsage": false,
                     "textColor": "none",
                     "useMonospaceFont": true,
-                    "usePadding": false
+                    "usePadding": true
                 },
                 {
                     "defaultSettings": {
@@ -735,7 +735,7 @@
         "translucentWidgets": false
     },
     "wallpaper": {
-        "automationEnabled": false,
+        "automationEnabled": true,
         "directory": "~/Pictures/Wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
@@ -751,7 +751,7 @@
         "overviewEnabled": true,
         "overviewTint": 0.5,
         "panelPosition": "follow_bar",
-        "randomIntervalSec": 300,
+        "randomIntervalSec": 3600,
         "setWallpaperOnAllMonitors": true,
         "showHiddenFiles": false,
         "skipStartupTransition": false,

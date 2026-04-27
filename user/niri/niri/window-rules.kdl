@@ -1,13 +1,29 @@
+// Common rule for floating window
+window-rule {
+  match app-id="org.kde.kdeconnect.app"                  // KDE Connect
+  match app-id=r"^[Pp]inentry"                           // Pinentry
+  match app-id=r"^org.freedesktop.impl.portal.desktop"   // XDG Desktop Portals
+  match app-id="steam"                                   // Steam
+
+  open-maximized false
+  open-floating true
+}
+
 // Pinentry
 window-rule {
   match app-id=r"^[Pp]inentry"
 
   block-out-from "screen-capture"
-
-  open-maximized false
-  open-floating true
   open-focused true
 
   default-floating-position x=0 y=20 relative-to="top"
   default-column-width { fixed 300; }
+}
+
+// XDG Desktop Portal
+window-rule {
+  match app-id=r"^org.freedesktop.impl.portal.desktop"
+
+  default-floating-position x=0 y=20 relative-to="top"
+  default-column-width { proportion 0.33333; }
 }
