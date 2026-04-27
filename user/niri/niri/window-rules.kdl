@@ -1,9 +1,11 @@
 // Common rule for floating window
 window-rule {
-  match app-id="org.kde.kdeconnect.app"                  // KDE Connect
-  match app-id=r"^[Pp]inentry"                           // Pinentry
-  match app-id=r"^org.freedesktop.impl.portal.desktop"   // XDG Desktop Portals
-  match app-id="steam"                                   // Steam
+  match app-id="org.kde.kdeconnect.app"                   // KDE Connect
+  match app-id=r#"^[Pp]inentry"#                          // Pinentry
+  match app-id=r#"^org.freedesktop.impl.portal.desktop"#  // XDG Desktop Portals
+  match app-id="steam"                                    // Steam
+  match app-id="unityhub"                                 // Unity Hub
+  match app-id=r#"^[Bb]itwarden$"#                        // Bitwarden
 
   open-maximized false
   open-floating true
@@ -11,7 +13,7 @@ window-rule {
 
 // Pinentry
 window-rule {
-  match app-id=r"^[Pp]inentry"
+  match app-id=r#"^[Pp]inentry"#
 
   block-out-from "screen-capture"
   open-focused true
@@ -22,8 +24,27 @@ window-rule {
 
 // XDG Desktop Portal
 window-rule {
-  match app-id=r"^org.freedesktop.impl.portal.desktop"
+  match app-id=r#"^org.freedesktop.impl.portal.desktop"#
 
   default-floating-position x=0 y=20 relative-to="top"
   default-column-width { proportion 0.33333; }
+}
+
+// Unity Editor
+window-rule {
+  match app-id="Unity" title=r#"^Unity"# title=r#"<.+>$"#
+
+  open-maximized true
+  open-maximized-to-edges true
+}
+
+// Bitwarden
+window-rule {
+  match app-id=r#"^[Bb]itwarden$"#
+
+  block-out-from "screen-capture"
+
+  default-floating-position x=20 y=20 relative-to="top-right"
+  default-column-width { fixed 800; }
+  default-window-height { fixed 1000; }
 }
