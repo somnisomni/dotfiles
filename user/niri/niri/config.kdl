@@ -102,6 +102,9 @@ window-rule {
     draw-border-with-background false
 }
 
+// ### Import window rules config
+include optional=true "./window-rules.kdl"
+
 // ### Named workspaces - Development
 workspace "dev" {
     layout {

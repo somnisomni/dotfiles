@@ -1,0 +1,13 @@
+// Pinentry
+window-rule {
+  match app-id=r"^[Pp]inentry"
+
+  block-out-from "screen-capture"
+
+  open-maximized false
+  open-floating true
+  open-focused true
+
+  default-floating-position x=0 y=20 relative-to="top"
+  default-column-width { fixed 300; }
+}
