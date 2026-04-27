@@ -40,6 +40,7 @@ PACKAGES=(
     # File manager / Archiver / Thumbnailers
     "dolphin"
     "ark"
+    "archlinux-xdg-menu"
     "ffmpegthumbnailer"
     "ffmpegthumbs"
     "icoutils"

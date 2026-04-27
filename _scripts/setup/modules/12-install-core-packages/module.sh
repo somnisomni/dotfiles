@@ -22,6 +22,7 @@ PACKAGES=(
     "exfatprogs"
     "ntfsplus-dkms-git"
     "ntfsprogs-plus"
+    "ntfsplus-udev"
     "f2fs-tools"
     "bcachefs-dkms"
     "bcachefs-tools"
