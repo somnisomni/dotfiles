@@ -1,0 +1,12 @@
+output "PNP(AOC) Q27G2G3R4B PVKM7HA012143" {
+    mode "2560x1440@170.002"
+    scale 1
+    focus-at-startup
+    variable-refresh-rate
+}
+
+output "Lenovo Group Limited R27qe Gen2 UTP01A5Z" {
+    mode "2560x1440@120.000"
+    scale 1
+    variable-refresh-rate
+}
