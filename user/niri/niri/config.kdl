@@ -36,12 +36,6 @@ input {
     mod-key-nested "Alt"
 }
 
-// ### Output device configurations
-//     Various output configuraions are located in "outputs" subfolder.
-//     Pick one that matches with the hardware and copy the file as "local.kdl" in same folder or create one from scratch.
-//     The "local.kdl" file will not be included in dotfiles tree.
-include optional=true "./outputs/local.kdl"
-
 // ### Global layout configurations
 layout {
     // Gaps between columns
@@ -105,12 +99,11 @@ window-rule {
 // ### Import window rules config
 include optional=true "./window-rules.kdl"
 
-// ### Named workspaces - Development
-workspace "dev" {
-    layout {
-        default-column-width { proportion 0.75; }
-    }
-}
+// ### Output device configurations
+//     Various output configuraions are located in "outputs" subfolder.
+//     Pick one that matches with the hardware and copy the file as "local.kdl" in same folder or create one from scratch.
+//     The "local.kdl" file will not be included in dotfiles tree.
+include optional=true "./outputs/local.kdl"
 
 // ### Key bindings
 binds {
@@ -143,6 +136,8 @@ binds {
     Mod+Ctrl+End             repeat=false hotkey-overlay-title="Move column to last"                  { move-column-to-last; }
     Mod+BracketLeft          cooldown-ms=100 hotkey-overlay-title="Cycle column width back"           { switch-preset-column-width-back; }
     Mod+BracketRight         cooldown-ms=100 hotkey-overlay-title="Cycle column width forth"          { switch-preset-column-width; }
+    Mod+Minus                cooldown-ms=100 hotkey-overlay-title="Cycle window height back"          { switch-preset-window-height-back; }
+    Mod+Equal                cooldown-ms=100 hotkey-overlay-title="Cycle window height forth"         { switch-preset-window-height; }
 
     // #"Workspace manipulations"
     Mod+Up         cooldown-ms=100 hotkey-overlay-title="Focus previous workspace"          { focus-workspace-up; }
@@ -234,7 +229,6 @@ screenshot-path "~/Pictures/Screenshots/Screenshot_%Y%m%d%H%M%S.png"
 
 // ### Auto start programs
 spawn-at-startup    "env" "XDG_MENU_PREFIX=arch-" "kbuildsycoca6" "--noincremental"  // Build desktop menu for file association in Dolphin
-spawn-sh-at-startup "niri msg action focus-workspace 2"                              // Focus first unnamed workspace
 spawn-sh-at-startup "qs -c $QUICKSHELL_CONFIG_NAME -d"                               // Noctalia Shell
 spawn-sh-at-startup "niri completions zsh > ~/.niri.zsh"                             // Autogenerate ZSH completion script
 

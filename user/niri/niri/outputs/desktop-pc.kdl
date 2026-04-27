@@ -1,12 +1,35 @@
 output "PNP(AOC) Q27G2G3R4B PVKM7HA012143" {
     mode "2560x1440@170.002"
     scale 1
+    position x=0 y=0
     focus-at-startup
     variable-refresh-rate on-demand=true
+
+    hot-corners {
+        top-right
+    }
 }
 
 output "Lenovo Group Limited R27qe Gen2 UTP01A5Z" {
     mode "2560x1440@120.000"
     scale 1
+    transform "90"
+    position x=-1280 y=-600
     variable-refresh-rate on-demand=true
+
+    hot-corners {
+        top-left
+    }
+
+    layout {
+        default-column-width { proportion 1.0; }
+        preset-window-heights {
+            proportion 0.25
+            proportion 0.3333333333
+            proportion 0.5
+            proportion 0.6666666667
+            proportion 0.75
+            proportion 1.0
+        }
+    }
 }
