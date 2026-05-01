@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -u
 
-TARGET_VARIANT="Customized by somni"
+TARGET_VARIANT="dotfiles by somni"
 
 ##### MODULE PROCEDURE DEFINITIONS #####
 function check_before_run() {
