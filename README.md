@@ -10,6 +10,7 @@ Desired System Setup
 - **Package Manager**: [yay](https://github.com/jguer/yay) as pacman/AUR helper
 - **Shell**: [zsh](https://www.zsh.org) with [Oh My Zsh](https://ohmyz.sh) and [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
 - **Window Manager**: [Niri](https://github.com/niri-wm/niri) with [Noctalia Shell](https://noctalia.dev)
+- **Input Method**: [Fcitx5](https://github.com/fcitx/fcitx5)
 - **Terminal**: [Kitty](https://sw.kovidgoyal.net/kitty/)
 - **File Manager**: [Dolphin](https://apps.kde.org/dolphin/)
 - **Web Browser**: [Vivaldi](https://vivaldi.com/)
