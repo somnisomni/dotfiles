@@ -36,6 +36,12 @@ input {
     mod-key-nested "Alt"
 }
 
+// ### Cursor
+cursor {
+    xcursor-theme "phinger-cursors-dark"
+    xcursor-size 24
+}
+
 // ### Global layout configurations
 layout {
     // Gaps between columns
