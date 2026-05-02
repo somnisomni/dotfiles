@@ -30,3 +30,8 @@
     #   VM-specific hook scripts (system/libvirt/hooks/qemu.d) are meant to be manually configured by the user, by the purpose.
     - command: "cp system/libvirt/hooks/qemu /etc/libvirt/hooks/qemu && chmod +x /etc/libvirt/hooks/qemu && chown root:root /etc/libvirt/hooks/qemu"
       description: "Copy libvirt QEMU hooks"
+
+    # Link XDG menus (fix for Dolphin "Open With" dialog)
+    #   `archlinux-xdg-menu` package should be installed for this fix to be worked
+    - command: "mkdir -p /etc/xdg/menus && ln -sf /etc/xdg/menus/arch-applications.menu /etc/xdg/menus/applications.menu"
+      description: "Link XDG menus"

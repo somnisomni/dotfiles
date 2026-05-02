@@ -162,7 +162,7 @@ binds {
 
     // #"Application shortcuts"
     Mod+T repeat=false hotkey-overlay-title="Open a terminal"     { spawn-sh "$NIRI_TERMINAL"; }
-    Mod+E repeat=false hotkey-overlay-title="Open a file manager" { spawn-sh "$NIRI_FILE_MANAGER"; }
+    Mod+E repeat=false hotkey-overlay-title="Open a file manager" { spawn-sh "env XDG_MENU_PREFIX=arch- kbuildsycoca6 --noincremental; $NIRI_FILE_MANAGER"; }
     Mod+R repeat=false hotkey-overlay-title="Open a web browser"  { spawn-sh "$NIRI_BROWSER"; }
 
     // #"Noctalia Shell behaviors"
