@@ -21,6 +21,7 @@ git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${BASEDIR}"
 
 # ** Run Dotbot for user configuration **
+echo
 if [[ -r "${CONFIG}" ]]; then
     echo "[*] Running Dotbot for user-specific configuration (${CONFIG})..."
     "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
@@ -29,6 +30,7 @@ else
 fi
 
 # ** Run Dotbot for system-wide configuration with sudo **
+echo
 if [[ -r "${CONFIG_SUDO}" ]]; then
     echo "[*] Running Dotbot for system-wide configuration (${CONFIG_SUDO})..."
     sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG_SUDO}" "${@}"
@@ -37,9 +39,12 @@ else
 fi
 
 # ** Prompt for setup script execution **
+echo
 if [[ -x "${BASEDIR}/${SETUP_SCRIPT}" ]]; then
     echo
     read -r -n 1 -p "[?] Continue to execute first-time setup script? (${SETUP_SCRIPT}) [y/N] " choice
+
+    echo
     case $choice in
         [yY]* )
             echo
