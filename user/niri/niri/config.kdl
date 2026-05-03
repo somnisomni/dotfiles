@@ -168,7 +168,7 @@ binds {
     // #"Noctalia Shell behaviors"
     Mod+Slash         repeat=false hotkey-overlay-title="Show hotkey list overlay"               { spawn-sh "qs -c $QUICKSHELL_CONFIG_NAME ipc call plugin:keybind-cheatsheet toggle"; }
     Mod+L             repeat=false hotkey-overlay-title="[Noctalia] Lock the screen"             { spawn-sh "qs -c $QUICKSHELL_CONFIG_NAME ipc call lockScreen lock"; }
-    Mod+Space         repeat=false hotkey-overlay-title="[Noctalia] Toggle application launcher" { spawn-sh "qs -c $QUICKSHELL_CONFIG_NAME ipc call launcher toggle"; }
+    Alt+Space         repeat=false hotkey-overlay-title="[Noctalia] Toggle application launcher" { spawn-sh "qs -c $QUICKSHELL_CONFIG_NAME ipc call launcher toggle"; }
     Mod+Period        repeat=false hotkey-overlay-title="[Noctalia] Toggle Emoji selector"       { spawn-sh "qs -c $QUICKSHELL_CONFIG_NAME ipc call launcher emoji"; }
     Mod+Comma         repeat=false hotkey-overlay-title="[Noctalia] Show clipboard history"      { spawn-sh "qs -c $QUICKSHELL_CONFIG_NAME ipc call launcher clipboard"; }
     Mod+Apostrophe    repeat=false hotkey-overlay-title="[Noctalia] Show window switcher"        { spawn-sh "qs -c $QUICKSHELL_CONFIG_NAME ipc call launcher windows"; }

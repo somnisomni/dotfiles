@@ -23,7 +23,7 @@ TogglePreedit=
 ModifierOnlyKeyTimeout=250
 
 [Hotkey/TriggerKeys]
-0=Control+space
+0=Super+space
 1=Hangul
 
 [Hotkey/PrevPage]
@@ -63,8 +63,6 @@ OverrideXkbOption=False
 CustomXkbOption=
 # Force Enabled Addons
 EnabledAddons=
-# Force Disabled Addons
-DisabledAddons=
 # Preload input method to be used by default
 PreloadInputMethod=True
 # Allow input method in the password field
@@ -73,4 +71,9 @@ AllowInputMethodForPassword=False
 ShowPreeditForPassword=False
 # Interval of saving user data in minutes
 AutoSavePeriod=30
+
+[Behavior/DisabledAddons]
+0=kimpanel
+1=quickphrase
+2=spell
 
