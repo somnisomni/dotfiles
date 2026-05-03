@@ -30,9 +30,6 @@
     ~/.zshrc: user/zsh/.zshrc
     ~/.p10k.zsh: user/zsh/.powerlevel10k.zsh
 
-    # Nano
-    ~/.nanorc: user/nano/.nanorc
-
     # Aria2
     ~/.config/aria2/aria2.conf: user/aria2/aria2.conf
 

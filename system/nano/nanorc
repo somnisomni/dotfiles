@@ -1,0 +1,19 @@
+########## somni.dotfiles #########
+## Nano Configurations  (System) ##
+
+# Load `nano-syntax-highlighting` configurations
+include "/usr/share/nano/*.nanorc"
+include "/usr/share/nano-syntax-highlighting/*.nanorc"
+
+# Enable mouse
+set mouse
+
+# Show scrollbar on right
+set indicator
+
+# Show some states in titlebar
+set stateflags
+
+# Tab settings
+set tabsize 4
+set tabstospaces

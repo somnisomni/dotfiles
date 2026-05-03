@@ -1,5 +1,0 @@
-##### somni.dotfiles ####
-## Nano Configurations ##
-
-# Load `nano-syntax-highlighting` configurations
-include "/usr/share/nano/*.nanorc"

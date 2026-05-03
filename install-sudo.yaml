@@ -14,16 +14,24 @@
       recursive: true
 
 - link:
+    # ** System-wide configurations
     # KMSCON
     /etc/kmscon/kmscon.conf: system/kmscon/kmscon.conf
 
     # ZRAM
     /etc/systemd/zram-generator.conf: system/zram/zram-generator.conf
 
+    # Nano
+    /etc/nanorc: system/nano/nanorc
+
+    # ** Root user configurations
     # GTK/QT theme configs (for elevated applications)
     /root/.config/gtk-3.0/settings.ini: user/gtk-3.0/settings.ini
     /root/.config/gtk-4.0/settings.ini: user/gtk-4.0/settings.ini
     /root/.config/qt6ct/qt6ct.conf: user/qt6ct/qt6ct.conf
+
+    # Nano
+    /root/.nanorc: user/nano/.nanorc-root
 
 - shell:
     # Install libvirt QEMU hooks

@@ -1,0 +1,5 @@
+######### somni.dotfiles ########
+## Nano Configurations  (Root) ##
+
+# Special interface colors for root (UID 0) user
+set titlecolor bold,white,red
