@@ -7,7 +7,6 @@ environment {
     NIRI_TERMINAL "kitty"
     NIRI_BROWSER "vivaldi"
     NIRI_FILE_MANAGER "dolphin"
-    NIRI_SYSTEM_MONITOR "plasma-systemmonitor"
 }
 
 // ### Input device configurations
@@ -164,7 +163,6 @@ binds {
     Mod+9          repeat=false hotkey-overlay-title="Focus workspace to index 9"           { focus-workspace 9; }
 
     // #"Application shortcuts"
-    Ctrl+Shift+Escape repeat=false hotkey-overlay-title="Open a system monitor" { spawn-sh "$NIRI_SYSTEM_MONITOR"; }
     Mod+T             repeat=false hotkey-overlay-title="Open a terminal"       { spawn-sh "$NIRI_TERMINAL"; }
     Mod+E             repeat=false hotkey-overlay-title="Open a file manager"   { spawn-sh "env XDG_MENU_PREFIX=arch- kbuildsycoca6 --noincremental; $NIRI_FILE_MANAGER"; }
     Mod+R             repeat=false hotkey-overlay-title="Open a web browser"    { spawn-sh "$NIRI_BROWSER"; }
@@ -177,6 +175,7 @@ binds {
     Mod+Apostrophe    repeat=false hotkey-overlay-title="[Noctalia] Show window switcher"        { spawn-sh "noctalia msg window-switcher"; }
     Mod+Escape        repeat=false hotkey-overlay-title="[Noctalia] Toggle session menu"         { spawn-sh "noctalia msg panel-toggle session"; }
     Ctrl+Alt+Delete   repeat=false hotkey-overlay-title="[Noctalia] Toggle session menu"         { spawn-sh "noctalia msg panel-toggle session"; }
+    Ctrl+Shift+Escape repeat=false hotkey-overlay-title="[Noctalia] Toggle system monitor panel" { spawn-sh "noctalia msg panel-toggle control-center system"; }
 
     // #"Media controls" (playerctl) with keypad-driven fallbacks
     Mod+KP_Right       allow-when-locked=true repeat=false hotkey-overlay-title="Media control - Next"       { spawn "playerctl" "next"; }

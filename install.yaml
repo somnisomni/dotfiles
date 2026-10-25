@@ -54,8 +54,7 @@
 
     # Niri & Noctalia Shell
     ~/.config/niri: user/niri/niri
-    ~/.config/noctalia/settings.json: user/niri/noctalia/settings.json
-    ~/.config/noctalia/plugins.json: user/niri/noctalia/plugins.json
+    ~/.config/noctalia/config.toml: user/niri/noctalia/config.toml
     ~/.config/noctalia/user-templates.toml: user/niri/noctalia/user-templates.toml
     ~/.config/noctalia/templates: user/niri/noctalia/templates
 

@@ -27,6 +27,9 @@
     # SSH
     /etc/ssh/sshd_config: system/ssh/sshd_config
 
+    # Greetd (Noctalia Greeter)
+    /etc/greetd/config.toml: system/greetd/config.toml
+
 
     # ** Root user configurations
     # GTK/QT theme configs (for elevated applications)

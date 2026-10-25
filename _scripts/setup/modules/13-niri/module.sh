@@ -4,11 +4,11 @@ set -u
 PACKAGES=(
     # Niri
     "niri-git"
-    "xwayland-satellite"
+    "xwayland-satellite-git"
 
     # Shell
-    "noctalia-qs"
-    "noctalia-shell"
+    "noctalia"
+    "noctalia-greeter"
 
     # Themeing
     "adw-gtk-theme"

@@ -1,0 +1,592 @@
+[backdrop]
+blur_intensity = 0.8
+enabled = true
+tint_intensity = 0.5
+
+[bar]
+order = [ "Default" ]
+
+    [bar.Default]
+    background_opacity = 0.8
+    center = [ "media", "audio_visualizer" ]
+    end = [
+        "tray",
+        "notifications",
+        "network",
+        "bluetooth",
+        "volume",
+        "brightness",
+        "battery",
+        "clock",
+        "recorder",
+        "control-center",
+        "session"
+    ]
+    margin_edge = 5
+    margin_ends = 200
+    padding = 16
+    radius = 16
+    start = [
+        "launcher",
+        "windows_vm",
+        "workspaces",
+        "cpu",
+        "temp",
+        "sysmon",
+        "ram",
+        "network_tx",
+        "network_rx",
+        "active_window"
+    ]
+    thickness = 32
+    widget_spacing = 16
+
+        [bar.Default.monitor.DP-2]
+        background_opacity = 0.0
+        capsule = true
+        capsule_border = "outline"
+        capsule_padding = 24.0
+        capsule_thickness = 1.0
+        center = [ "workspaces" ]
+        compositor_blur = false
+        end = []
+        reserve_space = false
+        shadow = false
+        smart_auto_hide = true
+        start = []
+        thickness = 48
+
+            [bar.Default.monitor.DP-2.dead_zone.actions]
+            right = "none"
+
+[config]
+
+[control_center]
+hidden_tabs = [ "power" ]
+sidebar = "full"
+sidebar_section = "none"
+width = 1000
+
+[desktop_widgets]
+enabled = false
+
+[location]
+address = "Giheung-gu, Yongin-si"
+
+[lockscreen]
+blurred_desktop = true
+monitors = [ "DP-3" ]
+tint_intensity = 0.75
+transition = [ "wipe" ]
+transition_duration = 1000
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [
+    "lockscreen-widget-0000000000000006",
+    "lockscreen-widget-0000000000000007",
+    "lockscreen-widget-0000000000000008",
+    "lockscreen-widget-0000000000000001",
+    "lockscreen-login-box@DP-3",
+    "lockscreen-login-box@DP-2",
+    "lockscreen-widget-0000000000000004",
+    "lockscreen-widget-0000000000000002",
+    "lockscreen-widget-0000000000000003",
+    "lockscreen-widget-0000000000000005",
+    "lockscreen-widget-0000000000000009",
+    "lockscreen-widget-000000000000000a",
+    "lockscreen-widget-000000000000000b"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-2"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 720.0
+    cy = 2378.0
+    output = "DP-2"
+    placement_height = 2560.0
+    placement_width = 1440.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-2".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-3"]
+    box_height = 70.0
+    box_width = 704.0
+    cx = 1280.0
+    cy = 1296.0
+    output = "DP-3"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-3".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 16.0
+        center_password_text = true
+        input_opacity = 0.8
+        input_radius = 8.0
+        layout = "compact"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = false
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    box_height = 704.0
+    box_width = 768.0
+    cx = 1280.0
+    cy = 432.0
+    output = "DP-3"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "fancy_audio_visualizer"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
+        background = false
+        bloom_intensity = 0.5
+        fade_when_idle = true
+        inner_diameter = 1.0
+        rotation_speed = 0.0
+        sensitivity = 1.2
+        visualization_mode = "wave"
+        wave_thickness = 1.0
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
+    box_height = 96.0
+    box_width = 288.0
+    cx = 1280.0
+    cy = 408.0
+    output = "DP-3"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000002.settings]
+        background = false
+        center_text = true
+        clock_style = "digital"
+        font_family = "IBM Plex Sans KR Text"
+        format = "{:%H:%M:%S}"
+        shadow = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000003]
+    box_height = 48.0
+    box_width = 304.0
+    cx = 1280.0
+    cy = 480.0
+    output = "DP-3"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000003.settings]
+        background = false
+        font_family = "IBM Plex Sans KR Thin"
+        format = "{:%Y/%m/%d %A}"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000004]
+    box_height = 160.0
+    box_width = 336.0
+    cx = 1464.0
+    cy = 1120.0
+    output = "DP-3"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = -0.0
+    type = "media_player"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000004.settings]
+        album_art_background = true
+        album_art_blur = 48
+        audio_visualizer = false
+        background = true
+        background_opacity = 0.8
+        background_padding = 16
+        background_radius = 16
+        font_family = ""
+        hide_when_no_media = false
+        layout = "horizontal"
+        shadow = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000005]
+    box_height = 160.0
+    box_width = 336.0
+    cx = 1096.0
+    cy = 1120.0
+    output = "DP-3"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "weather"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000005.settings]
+        background_padding = 16
+        background_radius = 16
+        show_forecast = false
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000006]
+    box_height = 128.0
+    box_width = 208.0
+    cx = 134.0
+    cy = 1337.0
+    output = "DP-3"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "sysmon"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000006.settings]
+        background_padding = 8
+        background_radius = 16
+        display = "graph"
+        shadow = true
+        show_label = true
+        stat = "cpu_usage"
+        stat2 = "cpu_temp"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000007]
+    box_height = 128.0
+    box_width = 208.0
+    cx = 134.0
+    cy = 1197.0
+    output = "DP-3"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "sysmon"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000007.settings]
+        background_padding = 8
+        background_radius = 16
+        display = "graph"
+        shadow = true
+        show_label = true
+        stat = "gpu_usage"
+        stat2 = "gpu_temp"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000008]
+    box_height = 128.0
+    box_width = 208.0
+    cx = 134.0
+    cy = 1056.0
+    output = "DP-3"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "sysmon"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000008.settings]
+        background_padding = 8
+        background_radius = 16
+        display = "graph"
+        shadow = true
+        show_label = true
+        stat = "ram_pct"
+        stat2 = "gpu_vram"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000009]
+    box_height = 16.0
+    box_width = 192.0
+    cx = 134.0
+    cy = 1008.0
+    output = "DP-3"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "label"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000009.settings]
+        background = false
+        description = ""
+        opacity = 1.0
+        title = "RAM / VRAM"
+
+    [lockscreen_widgets.widget.lockscreen-widget-000000000000000a]
+    box_height = 16.0
+    box_width = 192.0
+    cx = 134.0
+    cy = 1152.0
+    output = "DP-3"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "label"
+
+        [lockscreen_widgets.widget.lockscreen-widget-000000000000000a.settings]
+        background = false
+        description = ""
+        opacity = 1.0
+        title = "GPU"
+
+    [lockscreen_widgets.widget.lockscreen-widget-000000000000000b]
+    box_height = 16.0
+    box_width = 192.0
+    cx = 134.0
+    cy = 1288.0
+    output = "DP-3"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "label"
+
+        [lockscreen_widgets.widget.lockscreen-widget-000000000000000b.settings]
+        background = false
+        description = ""
+        opacity = 1.0
+        title = "CPU"
+
+[notification]
+background_opacity = 0.8
+history_retention_hours = 24
+width = 320
+
+[osd]
+background_opacity = 0.8
+hide_delay_ms = 1500
+orientation = "vertical"
+position_vertical = "top_right"
+
+[plugin_settings."kenn/keybind-cheatsheet"]
+cheatsheet_placement = "attached"
+
+[plugin_settings."noctalia/screen_recorder"]
+audio_bitrate = 256
+video_bitrate_mode = "vbr"
+video_quality = "ultra"
+video_source = "region"
+
+[plugins]
+enabled = [ "kenn/keybind-cheatsheet", "noctalia/screen_recorder" ]
+
+[shell]
+date_format = "%x %A"
+external_ip_enabled = true
+niri_overview_type_to_launch_enabled = true
+panel_anchor_bar = "Default"
+password_style = "random"
+polkit_agent = true
+settings_expand_all_groups = true
+settings_window_translucent = true
+time_format = "{:%H:%M:%S}"
+
+    [shell.greeter_sync]
+    auto_sync = true
+
+    [shell.keyboard_layout.custom_labels]
+    "Korean (101/104-key compatible)" = "Korean"
+
+    [shell.launcher]
+    category_icons_only = true
+    layout = "simple"
+    sort_by_usage = false
+
+        [shell.launcher.providers.windows]
+        global = true
+
+    [shell.panel]
+    clipboard_placement = "attached"
+    launcher_placement = "attached"
+    polkit_placement = "attached"
+
+    [shell.screenshot]
+    confirm_region = true
+    directory = "~/Pictures/Screenshots"
+    remember_last_region = true
+
+    [[shell.session.actions]]
+    action = "lock"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "1"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "logout"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "2"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "lock_and_suspend"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "3"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "reboot"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "4"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "command"
+    command = "systemctl reboot --firmware-setup"
+    countdown_seconds = 0.0
+    enabled = true
+    glyph = "memory"
+    label = "UEFI로 재부팅"
+    shortcut = "5"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "shutdown"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "6"
+    variant = "destructive"
+
+    [shell.shadow]
+    alpha = 0.32999999262392521
+    direction = "center"
+
+[system.monitor]
+cpu_poll_seconds = 2
+gpu_poll_seconds = 2
+memory_poll_seconds = 2
+network_poll_seconds = 2
+
+[templates.fcitx5-somni]
+input_path = "~/.config/noctalia/templates/fcitx5-somni.conf"
+output_path = "~/.local/share/fcitx5/themes/somni-noctalia/theme.conf"
+
+[templates.niri-somni]
+input_path = "~/.config/noctalia/templates/niri-somni.kdl"
+output_path = "~/.config/niri/noctalia-somni.kdl"
+
+[theme]
+mode = "dark"
+source = "wallpaper"
+wallpaper_scheme = "m3-tonal-spot"
+
+    [theme.templates]
+    builtin_ids = [ "btop" ]
+
+[wallpaper]
+directory = "~/Pictures/Wallpapers"
+edge_smoothness = 0.4
+transition = [ "honeycomb" ]
+transition_duration = 2000
+transition_on_startup = true
+
+    [wallpaper.automation]
+    enabled = true
+    interval_seconds = 3600
+
+[widget.active_window]
+capsule = true
+capsule_border = "outline"
+capsule_opacity = 0.0
+capsule_padding = 16
+icon_size = 16
+max_length = 200
+
+[widget.audio_visualizer]
+anchor = true
+bands = 64
+centered = false
+color_2 = "tertiary"
+mirrored = false
+width = 300
+
+    [widget.audio_visualizer.actions]
+    left = "panel-toggle control-center media"
+
+[widget.bluetooth]
+show_label = true
+
+[widget.clock]
+format = "{:%H:%M:%S}"
+
+[widget.cpu]
+font_family = "IBM Plex Mono"
+scale = 0.9
+
+[widget.launcher]
+custom_image = "~/.face"
+glyph = "noctalia"
+scale = 1.5
+
+[widget.media]
+album_art_only = true
+art_size = 24
+hide_when_idle = true
+hide_when_no_media = true
+rotate_album_art = true
+
+[widget.network_rx]
+font_family = "IBM Plex Mono"
+network_speed_compact = true
+scale = 0.9
+
+[widget.network_tx]
+font_family = "IBM Plex Mono"
+network_speed_compact = true
+scale = 0.9
+
+[widget.notifications]
+hide_when_no_unread = true
+
+[widget.ram]
+font_family = "IBM Plex Mono"
+scale = 0.9
+
+[widget.recorder]
+type = "noctalia/screen_recorder:recorder"
+
+[widget.sysmon]
+font_family = "IBM Plex Mono"
+scale = 0.9
+stat = "gpu_usage"
+
+[widget.temp]
+font_family = "Noto Sans Mono"
+scale = 0.9
+
+[widget.windows_vm]
+glyph = "brand-windows-filled"
+tooltip = "Windows VM 시작"
+type = "custom_button"
+
+    [widget.windows_vm.actions]
+    left = "exec pkexec virsh start WindowsVM"
+    middle = "none"
+
+[widget.workspaces]
+label_source = "name"
+labels_only_when_occupied = true
+max_label_chars = 3
