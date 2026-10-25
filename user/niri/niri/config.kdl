@@ -7,7 +7,7 @@ environment {
     NIRI_TERMINAL "kitty"
     NIRI_BROWSER "vivaldi"
     NIRI_FILE_MANAGER "dolphin"
-    QUICKSHELL_CONFIG_NAME "noctalia-shell"
+    NIRI_SYSTEM_MONITOR "plasma-systemmonitor"
 }
 
 // ### Input device configurations
@@ -113,12 +113,15 @@ include optional=true "./outputs/local.kdl"
 
 // ### Key bindings
 binds {
+    // #"System"
+    Mod+L repeat=false hotkey-overlay-title="Lock the current session" { spawn-sh "loginctl lock-session $XDG_SESSION_ID"; }
+
     // #"Niri fundamentals"
     // disabled: Mod+Slash repeat=false hotkey-overlay-title="Show hotkey list overlay" { show-hotkey-overlay; }
     Mod+Grave       repeat=false hotkey-overlay-title="Toggle Overview"                    { toggle-overview; }
     Mod+MouseMiddle repeat=false hotkey-overlay-title="Toggle Overview"                    { toggle-overview; }
-    Print           repeat=false hotkey-overlay-title="Take a screenshot"                  { screenshot; }
-    Mod+Print       repeat=false hotkey-overlay-title="Take a screenshot of whole screen"  { screenshot-screen; }
+    Print           repeat=false hotkey-overlay-title="Take a screenshot"                  { spawn-sh "noctalia msg screenshot-region"; }
+    Mod+Print       repeat=false hotkey-overlay-title="Take a screenshot of whole screen"  { spawn-sh "noctalia msg screenshot-fullscreen"; }
     Alt+Print       repeat=false hotkey-overlay-title="Take a screenshot of active window" { screenshot-window; }
 
     // #"Window/column manipulations"
@@ -161,20 +164,19 @@ binds {
     Mod+9          repeat=false hotkey-overlay-title="Focus workspace to index 9"           { focus-workspace 9; }
 
     // #"Application shortcuts"
-    Mod+T repeat=false hotkey-overlay-title="Open a terminal"     { spawn-sh "$NIRI_TERMINAL"; }
-    Mod+E repeat=false hotkey-overlay-title="Open a file manager" { spawn-sh "env XDG_MENU_PREFIX=arch- kbuildsycoca6 --noincremental; $NIRI_FILE_MANAGER"; }
-    Mod+R repeat=false hotkey-overlay-title="Open a web browser"  { spawn-sh "$NIRI_BROWSER"; }
+    Ctrl+Shift+Escape repeat=false hotkey-overlay-title="Open a system monitor" { spawn-sh "$NIRI_SYSTEM_MONITOR"; }
+    Mod+T             repeat=false hotkey-overlay-title="Open a terminal"       { spawn-sh "$NIRI_TERMINAL"; }
+    Mod+E             repeat=false hotkey-overlay-title="Open a file manager"   { spawn-sh "env XDG_MENU_PREFIX=arch- kbuildsycoca6 --noincremental; $NIRI_FILE_MANAGER"; }
+    Mod+R             repeat=false hotkey-overlay-title="Open a web browser"    { spawn-sh "$NIRI_BROWSER"; }
 
     // #"Noctalia Shell behaviors"
-    Mod+Slash         repeat=false hotkey-overlay-title="Show hotkey list overlay"               { spawn-sh "qs -c $QUICKSHELL_CONFIG_NAME ipc call plugin:keybind-cheatsheet toggle"; }
-    Mod+L             repeat=false hotkey-overlay-title="[Noctalia] Lock the screen"             { spawn-sh "qs -c $QUICKSHELL_CONFIG_NAME ipc call lockScreen lock"; }
-    Alt+Space         repeat=false hotkey-overlay-title="[Noctalia] Toggle application launcher" { spawn-sh "qs -c $QUICKSHELL_CONFIG_NAME ipc call launcher toggle"; }
-    Mod+Period        repeat=false hotkey-overlay-title="[Noctalia] Toggle Emoji selector"       { spawn-sh "qs -c $QUICKSHELL_CONFIG_NAME ipc call launcher emoji"; }
-    Mod+Comma         repeat=false hotkey-overlay-title="[Noctalia] Show clipboard history"      { spawn-sh "qs -c $QUICKSHELL_CONFIG_NAME ipc call launcher clipboard"; }
-    Mod+Apostrophe    repeat=false hotkey-overlay-title="[Noctalia] Show window switcher"        { spawn-sh "qs -c $QUICKSHELL_CONFIG_NAME ipc call launcher windows"; }
-    Mod+Escape        repeat=false hotkey-overlay-title="[Noctalia] Toggle session menu"         { spawn-sh "qs -c $QUICKSHELL_CONFIG_NAME ipc call sessionMenu toggle"; }
-    Ctrl+Alt+Delete   repeat=false hotkey-overlay-title="[Noctalia] Toggle session menu"         { spawn-sh "qs -c $QUICKSHELL_CONFIG_NAME ipc call sessionMenu toggle"; }
-    Ctrl+Shift+Escape repeat=false hotkey-overlay-title="[Noctalia] Show system monitor"         { spawn-sh "qs -c $QUICKSHELL_CONFIG_NAME ipc call systemMonitor toggle"; }
+    Mod+Slash         repeat=false hotkey-overlay-title="Show hotkey list overlay"               { spawn-sh "noctalia msg panel-toggle kenn/keybind-cheatsheet:cheatsheet"; }
+    Alt+Space         repeat=false hotkey-overlay-title="[Noctalia] Toggle application launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+Period        repeat=false hotkey-overlay-title="[Noctalia] Toggle Emoji selector"       { spawn-sh "noctalia msg panel-toggle launcher /emo"; }
+    Mod+Comma         repeat=false hotkey-overlay-title="[Noctalia] Show clipboard panel"        { spawn-sh "noctalia msg panel-toggle clipboard"; }
+    Mod+Apostrophe    repeat=false hotkey-overlay-title="[Noctalia] Show window switcher"        { spawn-sh "noctalia msg window-switcher"; }
+    Mod+Escape        repeat=false hotkey-overlay-title="[Noctalia] Toggle session menu"         { spawn-sh "noctalia msg panel-toggle session"; }
+    Ctrl+Alt+Delete   repeat=false hotkey-overlay-title="[Noctalia] Toggle session menu"         { spawn-sh "noctalia msg panel-toggle session"; }
 
     // #"Media controls" (playerctl) with keypad-driven fallbacks
     Mod+KP_Right       allow-when-locked=true repeat=false hotkey-overlay-title="Media control - Next"       { spawn "playerctl" "next"; }
@@ -206,10 +208,20 @@ binds {
     XF86MonBrightnessDown    allow-when-locked=true cooldown-ms=50 hotkey-overlay-title="Decrease screen brightness" { spawn "brightnessctl" "--class=backlight" "-n1" "set" "5%-"; }
 }
 
-// ### Noctalia Shell - blurred overview wallpaper
+// ### Noctalia Shell - Blurred overview background
+//     Reference: https://docs.noctalia.dev/noctalia/compositor-settings/niri/?section=option-1-blurred-overview-wallpaper#option-1-blurred-overview-wallpaper
 layer-rule {
-    match namespace="^noctalia-overview*"
+    match namespace="^noctalia-backdrop"
     place-within-backdrop true
+}
+
+// ### Noctalia Shell - Settings window
+//     Reference: https://docs.noctalia.dev/noctalia/compositor-settings/niri/?section=compositor-settings#compositor-settings
+window-rule {
+    match app-id="dev.noctalia.Noctalia"
+    open-floating true
+    default-column-width { fixed 1080; }
+    default-window-height { fixed 920; }
 }
 
 // ### Omit client-side decorations
@@ -235,11 +247,11 @@ screenshot-path "~/Pictures/Screenshots/Screenshot_%Y%m%d%H%M%S.png"
 
 // ### Auto start programs
 spawn-at-startup    "env" "XDG_MENU_PREFIX=arch-" "kbuildsycoca6" "--noincremental"  // Build desktop menu for file association in Dolphin
-spawn-sh-at-startup "qs -c $QUICKSHELL_CONFIG_NAME -d"                               // Noctalia Shell
+spawn-sh-at-startup "noctalia"                                                       // Noctalia Shell
 spawn-sh-at-startup "niri completions zsh > ~/.niri.zsh"                             // Autogenerate ZSH completion script
+spawn-sh-at-startup "noctalia completions zsh > ~/.noctalia.zsh"                     // Autogenerate Noctalia Shell completion script
 
 // ### Noctalia Shell color scheme
 //     This should be autogenerated by Noctalia Shell, thus will not be included in dotfiles tree.
 //     Enable BOTH built-in Niri template and user custom template.
 include optional=true "./noctalia-somni.kdl"
-include "./noctalia.kdl"
